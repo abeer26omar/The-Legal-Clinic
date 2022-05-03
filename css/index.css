@@ -8,8 +8,8 @@
 }
 .circle-lines{
     position: absolute;
-    left: -9%;
-    top: -9%;
+    left: -7%;
+    top: -8%;
     z-index: -1;
 }
 .lines-two{
@@ -27,8 +27,8 @@
 }
 @media screen and (max-width: 1199.5px) {
     .circle-lines{
-        left: -11%;
-        top: -13%;
+        left: -9%;
+        top: -11%;
     }
 }
 .dots{
@@ -395,13 +395,31 @@
 }
 
 .Testimonial .item .test-content{
-    display: table-cell !important;
     padding: 1.5rem;
     border-radius: 10px;
+    height: 300px;
     box-shadow: -3px 5px 12px rgba(0, 0, 0, 0.25);
     background-color: var(--white);
 }
-.Testimonial .item .test-content::after{
+@media screen and (max-width: 1024.5px) {
+    .Testimonial .item .test-content{
+        height: 350px;
+
+    }
+}
+@media screen and (max-width: 767.5px) {
+    .Testimonial .item .test-content{
+        height: 400px;
+
+    }
+}
+@media screen and (max-width: 375.5px) {
+    .Testimonial .item .test-content{
+        height: 520px;
+
+    }
+}
+.Testimonial .item .test-content::before{
     content: '';
     width: 0px;
     height: 0px;
@@ -409,9 +427,8 @@
     border-width: 20px 18px 0 18px;
     border-color: var(--white) transparent transparent transparent;
     position: relative;
-    top: 64px;
-    left: 50%;
-    
+    top: calc(100% + 40px);
+    left: 50%; 
 }
 .Testimonial .item .test-content h4{
     color: var(--neutral-Grey-8);
