@@ -592,3 +592,35 @@ nav .social-icons a:nth-child(1){
     background-color: var(--bg-color);
     cursor: pointer;
 }
+/* back top */
+/* scroll to top */
+.scroll-to-top {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  background: var(--white);
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 99;
+  text-align: center;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+  display: none;
+  /* border-radius: 50%; */
+  transition: all .4s ease
+}
+
+.scroll-to-top i {
+  color: var(--main-color);
+  font-size: 18px;
+  line-height: 45px
+}
+
+.scroll-to-top:hover {
+  background-color: var(--main-color)
+}
+
+.scroll-to-top:hover i {
+  color: var(--white);
+}
