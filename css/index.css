@@ -288,7 +288,7 @@
     bottom: 1rem;
 } */
 .practice .practice-box p.spec-color{
-    color: var(--main-color);
+    /* color: var(--main-color); */
     font-size: .9rem;
 }
 /* .practice .practice-box.spec:hover{
