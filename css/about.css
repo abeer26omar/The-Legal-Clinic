@@ -2,8 +2,9 @@
 .title-about{
     padding-bottom: 250px;
 }
+/* url('../images/bgImage\ \(2\).svg'), */
 .about-content{
-    background-image: url('../images/bgImage\ \(2\).svg'),radial-gradient(100% 100% at 50.03% 0%, rgba(0, 0, 134, 0.16) 0%, rgba(0, 0, 134, 0.65) 50.31%, #000086 100%);;
+    background-image: radial-gradient(100% 100% at 50.03% 0%, rgba(0, 0, 134, 0.16) 0%, rgba(0, 0, 134, 0.65) 50.31%, #000086 100%);;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
@@ -11,23 +12,34 @@
     z-index: 1;
     opacity: 0.8;
 }
-.about-content::after{
+.svg-sperator{
+    position: absolute;
+    width: 100%;
+    /* height: 20px;  */
+    bottom: 5px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+}
+/* .about-content::after{
     content: '';
-    background-image: url(../images/aboutshapes.svg);
+    background-image: url('../images/aboutshapes\ \(2\).svg');
     width: 100%;
     height: 100%;
     position: absolute;
     top: 5%;
     background-repeat: no-repeat;
     background-position: center bottom;
-    background-size: contain;
+    background-size: cover;
 
 }
 @media screen and (max-width: 768px) {
     .about-content::after{
         top: 3%;
     }
-}
+} */
 .title-about h2{
     color: var(--main-color);
     font-weight: 700;
@@ -134,7 +146,7 @@
 }
 .dotscircle-two{
     position: absolute;
-    top: calc(100% + 90rem);
+    top: calc(100% + 99rem);
     left: 3%;
 }
 @media screen and (max-width: 1199.5px) {
