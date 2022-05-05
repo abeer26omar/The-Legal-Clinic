@@ -41,19 +41,19 @@
                   <div id="header-nav" class="collapse navbar-collapse justify-content-center">
                     <ul class="navbar-nav">
                       <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                      <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#">Contact us</a></li>
+                      <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                      <li class="nav-item"><a class="nav-link active" href="pricing.html">Pricing</a></li>
+                      <li class="nav-item"><a class="nav-link" href="contact.html">Contact us</a></li>
                       <li class="nav-item dropdown at-spec-width">
-                        <a href="#" class="">Profile
+                        <a href="#" class="pro-spec">Profile
                           <button aria-label="dropdown toggler" id="drop-menu-profile" type="button">
                             <i class="fa fa-angle-down"></i>
                           </button>
                         </a>
                           <ul style="display: none;" id="ul-menu-profile">
-                            <li class="current"><a href="#">Dashboard</a></li>
-                            <li><a href="#">Account setting</a></li>
-                            <li><a href="#">Sign Out</a></li>
+                            <li class="current"><a href="#"><i class="fa-solid fa-table-columns"></i>Dashboard</a></li>
+                            <li><a href="#"><i class="fa-solid fa-gear"></i>Account setting</a></li>
+                            <li><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Sign Out</a></li>
                           </ul>
                       </li>
                     </ul>
@@ -69,9 +69,9 @@
                         <img src="images/profile.svg" alt="">
                       </a>
                       <ul class="dropdown-menu dropdown-menu-end dropdown-menu-start" aria-labelledby="dropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">Dashboard</a></li>
-                        <li><a class="dropdown-item" href="#">Account setting</a></li>
-                        <li><a class="dropdown-item" href="#">Sign Out</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-table-columns"></i>Dashboard</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gear"></i>Account setting</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Sign Out</a></li>
                       </ul>
                     </div>
                   <!-- </li> -->
@@ -81,27 +81,30 @@
           </nav>
           </div>
     </header> 
-        <!-- shapes -->
-        <div class="shapes">
-          <span class="lines-about">
-            <img src="images/aboutlines.svg" alt="aboutlines">
-          </span>
-          <span class="xshades-about">
-            <img src="images/xshadowsmall.svg" alt="xshadowsmall">
-          </span>
-          <span class="circles-about">
-            <img src="images/circlelines.svg" alt="circlelines">
-          </span>
-          <span class="circleshadow-about">
-            <img src="images/circleshadow.svg" alt="circleshadow">
-          </span>
+     <!-- shapes -->
+     <div class="shapes">
+      <span class="lines-about">
+        <img src="images/aboutlines.svg" alt="aboutlines">
+      </span>
+      <span class="xshades-about">
+        <img src="images/xshadowsmall.svg" alt="xshadowsmall">
+      </span>
+      <span class="circles-about">
+        <img src="images/circlelines.svg" alt="circlelines">
+      </span>
+      <span class="circleshadow-about">
+        <img src="images/circleshadow.svg" alt="circleshadow">
+      </span>
+    </div> 
+    <div class="title-about d-flex justify-content-center align-items-center">
+      <!-- <div class=""> -->
+        <div class="col-6 text-center">
+          <h2>The Legal Clinic</h2>
+          <p>is the first law firm specialized in serving and <br>supporting startups and empowering <br>entrepreneurship in MENA Region.</p>
         </div>
-        <div class="title-about">
-          <div class="d-flex justify-content-center align-items-center">
-            <h2>The Legal Clinic</h2>
-          </div>
-        </div>        
-      </section>
+      <!-- </div> -->
+    </div>  
+  </section>
      
       <!-- footer -->
       <footer class="site-footer">
@@ -141,7 +144,6 @@
                   </li>
                 </ul>
               </div>
-
               <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
                 <h3 class="footer-widget__title">Get In Touch</h3>
                 <ul class="list-unstyled footer-widget__contact">

@@ -274,7 +274,6 @@
     bottom: 1rem; */
 }
 .practice .practice-box:not(.spec):hover p{
-    
     color: var(--white);
 }
 .practice .practice-box:not(.spec):hover svg path  {
