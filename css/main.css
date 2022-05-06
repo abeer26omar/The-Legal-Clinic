@@ -490,12 +490,19 @@ nav .social-icons a:nth-child(1){
 /* shapes and titles */
 .about-content{
   background-image: url('../images/bgImage\ \(2\).svg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  /* background-repeat: no-repeat;
+  background-size: cover; */
   height: 100%;
+  width: 100%;
   position: relative;
   z-index: 1;
-  opacity: 0.8;
+    /* opacity: 0.8; */
+    /* z-index: 0; */
+    /* background-attachment: fixed; */
+    background-position:  center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background-image 300ms ease-in 200ms;
 }
 .title-about h2{
   color: var(--main-color);
@@ -512,25 +519,42 @@ nav .social-icons a:nth-child(1){
   font-weight: 500;
   font-size: 1.5rem;
 }
-.shapes .xshades-about{
-  position: absolute;
-  bottom: 17%;
-  left: 2%;
+@media screen and (max-width: 767.5px) {
+  .title-about p{
+    font-size: 1.3rem;
+  }
 }
-.shapes .circleshadow-about{
-  position: absolute;
-  right: 3%;
-  top: 20%;
+@media screen and (max-width: 425.5px) {
+  .title-about p{
+    font-size: 1rem;
+  }
 }
-.shapes .circles-about{
-  position: absolute;
-  right: 2%;
-  bottom: 15%;
+.xshades-about{
+    position: absolute;
+    bottom: 9%;
+    left: 2%;
 }
-.shapes .linesbreak{
+ .circleshadow-about{
+    position: absolute;
+    right: 3%;
+    top: 23%;
+}
+.circles-about{
+    position: absolute;
+    right: 2%;
+    bottom: 8%;
+}
+ 
+.lines-about{
   position: absolute;
-  left: 3%;
-  /* bottom: calc(100% + 44.2rem); */
+  top: 10%;
+
+}
+@media screen and (max-width: 767.5px) {
+  .lines-about ,
+  .circles-about{
+    display: none;
+  }
 }
 /* search pop up */
 .search-popup {
@@ -668,4 +692,13 @@ nav .social-icons a:nth-child(1){
 
 .scroll-to-top:hover i {
   color: var(--white);
+}
+/* herro wrap */
+.hero-wrap{
+  position: relative;
+  display: flex;
+  z-index: 2;
+  min-height: 100%;
+  padding: 4.5rem 0;
+  overflow: hidden;
 }

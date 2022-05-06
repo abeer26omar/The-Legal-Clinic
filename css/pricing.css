@@ -1,0 +1,83 @@
+/* button toggle */
+.switch {
+    background-color: var(--bg-color);
+    position: relative;
+    zoom: 1;
+    width: 45%;
+    display: inline-block;
+    border-radius: 10px;
+    height: 5rem;
+}
+@media screen and (max-width: 991.5px) {
+    .switch{
+        width:70%;
+    }
+}
+@media screen and (max-width: 767.5px) {
+    .switch{
+        width: 100%;
+    }
+}
+  .switch:before, .switch:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+  }
+  .switch:after {
+    clear: both;
+  }
+  .switch label {
+    float: left;
+    width: 50%;
+    position: relative;
+    z-index: 2;
+    /* line-height: 40px; */
+    text-align: center;
+    cursor: pointer;
+    color: var(--main-color);
+    border-radius: 10px;
+    padding: 1.3rem 0 1.3rem 0;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+  @media screen and (max-width: 375.5px) {
+      .switch label{
+          font-size: 1rem;
+      }
+  }
+  .switch input[type="radio"] {
+    display: none;
+  }
+  .switch input[type="radio"] + label svg path{
+    /* font-weight: bold; */
+    /* color: var(--bg-color); */
+    fill: var(--main-color);
+  }
+  .switch input[type="radio"]:checked + label svg path{
+   fill: var(--bg-color);
+    
+  }
+  .switch input[type="radio"]:checked + label {
+    /* font-weight: bold; */
+    color: var(--bg-color);
+
+  }
+  .switch span {
+    position: relative;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    display: block;
+    border-radius: 10px;
+    background-color: var(--main-color);
+    transition: all 200ms ease;
+  }
+  .switch span.right {
+    left: 50%;
+    border-radius: 10px;
+    transition: all 200ms ease;
+  }
+  

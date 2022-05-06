@@ -406,7 +406,11 @@
     padding-top: 80px;
     padding-bottom: 80px;
 }
-
+.quote-shape{
+    position: absolute;
+    right: 2%;
+    z-index: -1;
+}
 .Testimonial .title h2{
     color: var(--neutral-Grey-7);
     font-weight: 700;
