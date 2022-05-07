@@ -96,11 +96,9 @@
     border-radius: 5px;
 }
 .btn-sub:hover{
-    transform: scale(.97);
     color: var(--white);
 }
 .btn-ask:hover{
-    transform: scale(.97);
     color: var(--main-color);
 }
   @media screen and (max-width: 400px) {

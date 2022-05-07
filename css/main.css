@@ -448,6 +448,11 @@ nav .social-icons a:nth-child(1){
 .social-icons .dropdown-menu .dropdown-item:not(:last-child) {
   border-bottom: 1px solid var(--grey-footer) ;
 }
+.btn:hover{
+  transform: scale(.97);
+
+}
+
 /* --------------------- */
 /* footer */
 .site-footer{
