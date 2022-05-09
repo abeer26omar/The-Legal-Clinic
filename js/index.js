@@ -228,14 +228,14 @@ $(window).on("scroll", function() {
     }
 });
 // button toggle
-$('.switch label').on('click', function(){
-  var indicator = $(this).parent('.switch').find('span');
-  if ( $(this).hasClass('right') ){
-		$(indicator).addClass('right');
-  } else {
-    $(indicator).removeClass('right');
-  }
-});
+// $('.switch label').on('click', function(){
+//   var indicator = $(this).parent('.switch').find('span');
+//   if ( $(this).hasClass('right') ){
+// 		$(indicator).addClass('right');
+//   } else {
+//     $(indicator).removeClass('right');
+//   }
+// });
 
 const spanright = document.getElementById('span-right');
 const optionone = document.getElementById('optionone');
@@ -244,33 +244,33 @@ const optiontwo = document.getElementById('optiontwo');
 const areaone = document.getElementById('program-365');
 const areatwo = document.getElementById('case-by-case');
 
-// optionone.addEventListener('click',(e)=>{
-//   e.preventDefault();
-//   optionone.setAttribute('checked');
-//   optiontwo.removeAttribute('checked')
-//   if(areaone.style.display === 'none'){
-//     areaone.style.display = 'block';
-//     areatwo.style.display = 'none';
-//     // if(spanright.hasAttribute('class') == 'right'){
-//     //   spanright.classList.remove('right');
-//     // } else{
-//     //   spanright.classList.add('right');
-//     // }
-//   }
-// });
-// optiontwo.addEventListener('click', (e)=>{
-//   e.preventDefault();
-//   optiontwo.setAttribute('checked');
-//   optionone.removeAttribute('checked')
-//   if(areatwo.style.display === 'none'){
-//     areatwo.style.display = 'block';
-//     areaone.style.display = 'none';
-//     // if(spanright.hasAttribute('class') == 'right'){
-//     //   spanright.classList.remove('right');
-//     // } else{
-//     //   spanright.classList.add('right');
-//     // }
-//   }
-// });
+optionone.addEventListener('click',(e)=>{
+  e.preventDefault();
+  // optionone.setAttribute('checked');
+  // optiontwo.removeAttribute('checked')
+  if(areaone.style.display === 'none'){
+    areaone.style.display = 'block';
+    areatwo.style.display = 'none';
+    // if(spanright.hasAttribute('class') == 'right'){
+    //   spanright.classList.remove('right');
+    // } else{
+    //   spanright.classList.add('right');
+    // }
+  }
+});
+optiontwo.addEventListener('click', (e)=>{
+  e.preventDefault();
+  // optiontwo.setAttribute('checked');
+  // optionone.removeAttribute('checked')
+  if(areatwo.style.display === 'none'){
+    areatwo.style.display = 'block';
+    areaone.style.display = 'none';
+    // if(spanright.hasAttribute('class') == 'right'){
+    //   spanright.classList.remove('right');
+    // } else{
+    //   spanright.classList.add('right');
+    // }
+  }
+});
 // pagination
 
