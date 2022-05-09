@@ -8,29 +8,19 @@
 .svg-sperator{
     position: absolute;
     width: 100%;
-    height: 20px; 
-    bottom: 38px;
+    /* height: 20px;  */
+    /* bottom: 13.3%; */
+    top: calc(100% - 10rem);
     left: 0;
     display: flex;
     justify-content: center;
     flex-direction: column;
     z-index: 1;
 }
-/* .about-content::after{
-    content: '';
-    background-image: url('../images/aboutshapes\ \(2\).svg');
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 5%;
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    background-size: cover;
 
-}
-@media screen and (max-width: 768px) {
-    .about-content::after{
-        top: 3%;
+/* @media screen and (min-width: 1500px) {
+    .svg-sperator{
+        bottom: 6.3%;
     }
 } */
 

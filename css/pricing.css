@@ -51,7 +51,6 @@
     display: none;
   }
   .switch input[type="radio"] + label svg path{
-    
     fill: var(--main-color);
   }
   .switch input[type="radio"]:checked + label svg path{
@@ -118,6 +117,9 @@
       border-bottom:none ;
       /* border-top: none; */
   }
+  .pricing-365 .card .card-header svg{
+      z-index: 1;
+  }
   .pricing-365 .card ul{
       list-style: none;
       padding-left: 0;
@@ -130,38 +132,52 @@
   .pricing-365 .card ul li svg{
       /* padding-right: .5rem; */
       align-self: center;
+      z-index: 1;
   }
   .pricing-365 .card ul li span{
       color: var(--sec-color);
       font-weight: 500;
       font-size: 1.2rem;
+      z-index: 1;
       padding-left: .5rem;
   }
   .pricing-365 .card.card.spec ul li span{
       color: var(--bg-color);
+      z-index: 1;
+
   }
   .pricing-365 .card .card-footer{
       border-top: 1px dashed #A9A9AA;
+      z-index: 1;
   }
   .pricing-365 .card .card-footer h6 {
       color: var(--main-color);
       font-weight: 700;
+      z-index: 1;
+      padding-top: 1rem;
       font-size: 1.4rem;
   }
   .pricing-365 .card.card.spec .card-footer h6{
       color: var(--org-color);
+      z-index: 1;
+
   }
   .pricing-365 .card .card-footer h6 small{
     font-weight: 400;
     font-size: 10px;
+    z-index: 1;
+
   }
   .pricing-365 .card .card-footer p{
     font-weight: 400;
     color: var(--sec-color);
     /* font-size: 18px; */
+    z-index: 1;
+
   }
   .pricing-365 .card.card.spec .card-footer p{
       color: var(--bg-color);
+
   }
   .pricing-365 .card .card-footer .btn-choose{
       background-color: var(--main-color);
@@ -171,36 +187,69 @@
       border-radius: 10px;
       font-weight: 500;
       font-size: 1.5rem;
+      z-index: 1;
+
   }
   .pricing-365 .card.card.spec .card-footer .btn-choose{
       color: var(--sec-color);
       background-color: var(--bg-color);
   }
-  .pricing-365 .card:hover{
+  /* .pricing-365 .card:hover{
       background: var(--sec-color);
       -webkit-transform: scaleY(1.1);
       transform: scaleY(1.1);
-      /* clip-path:inset(10% 0); */
-
+  } */
+  .pricing-365 .card::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--sec-color);
+    -webkit-clip-path: inset(var(--inset-top) var(--inset-right) var(--inset-bottom) var(--inset-left));
+            clip-path: inset(var(--inset-top) var(--inset-right) var(--inset-bottom) var(--inset-left));
+    transition: 0.4s linear;
   }
+  .pricing-365 .card:hover::before{
+    --inset-top: 0;
+    --inset-right: 0;
+    --inset-bottom: 0;
+    --inset-left: 0;
+    -webkit-clip-path: inset(var(--inset-top) var(--inset-right) var(--inset-bottom) var(--inset-left));
+            clip-path: inset(var(--inset-top) var(--inset-right) var(--inset-bottom) var(--inset-left));
+  }
+  
   .pricing-365 .card:hover .card-header svg path{
       fill: var(--bg-color);
+    transition: 0.4s linear;
+
   }
   .pricing-365 .card:hover .card-body svg path{
       fill: var(--org-color);
+    transition: 0.4s linear;
+
   }
   .pricing-365 .card:hover .card-body ul li span{
       color: var(--bg-color);
+    transition: 0.4s linear;
+
   }
   .pricing-365 .card:hover .card-footer h6{
       color: var(--org-color);
+    transition: 0.4s linear;
+
   }
   .pricing-365 .card:hover .card-footer p{
       color: var(--bg-color);
+    transition: 0.4s linear;
+
   }
   .pricing-365 .card:hover .card-footer .btn-choose{
     color: var(--sec-color);
     background-color: var(--bg-color);
+    transition: 0.4s linear;
+
 }
 /* program-case */
 .program-case{
@@ -211,11 +260,100 @@
     font-weight: 700;
 }
 .program-case .program-row{
-    padding: 80px 0 0 0;
+    padding: 70px 0 0 0;
+}
+.program-case .card{
+    border: none;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+    background-color: var(--white);
+}
+@media screen and (max-width: 575px) {
+    .program-case .selection-sort{
+        justify-content: center !important;
+        flex-wrap: wrap;
+    }
+}
+.program-case .card .get{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* background-color: rgba(#000086,0.7); */
+    background-color: rgba(0, 0, 0, .6);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 30px;
+    -webkit-transition: opacity 500ms ease,-webkit-transform 500ms ease;
+    transition: opacity 500ms ease,-webkit-transform 500ms ease;
+    transition: transform 500ms ease,opacity 500ms ease;
+    transition: transform 500ms ease,opacity 500ms ease,-webkit-transform 500ms ease;
+    -webkit-transform: translateY(40%);
+    transform: translateY(40%);
+    opacity: 0;
+}
+.program-case .card .btn-get{
+    color: var(--main-color);
+    background-color: var(--white);
+    padding: 0 2rem;
+    height: 3rem;
+    width: 60%;
+    font-size: 1.4rem;
+}
+.program-case .card:hover .get{
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+    cursor: pointer;
 }
 .program-case .card .card-footer{
     border-top: none;
 }
 .program-case .card .card-header{
     padding: 0 1.7rem .5rem ;
+}
+.program-case .card-body h4{
+    color: var(--sec-color);
+}
+.program-case .card-footer h4{
+    color: var(--main-color);
+}
+.program-case .ptt-5{
+    padding-top: 5rem;
+}
+.program-case .pagination .page-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 1.2rem;
+
+}
+.program-case .pagination .page-item .page-link{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-color);
+}
+.program-case .pagination .page-item .page-link:hover{
+    background-color: var(--main-color);
+    color: var(--white);
+}
+.program-case .selection-sort .dropdown .btn{
+    background-color: transparent;
+    border: 1px solid var(--neutral-Grey-6);
+    width: 100%;
+    padding: .5rem 2rem;
+    border-radius: 30em;
+
 }
