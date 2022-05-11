@@ -218,6 +218,7 @@
     --inset-left: 0;
     -webkit-clip-path: inset(var(--inset-top) var(--inset-right) var(--inset-bottom) var(--inset-left));
             clip-path: inset(var(--inset-top) var(--inset-right) var(--inset-bottom) var(--inset-left));
+            /* cursor: pointer; */
   }
   
   .pricing-365 .card:hover .card-header svg path{

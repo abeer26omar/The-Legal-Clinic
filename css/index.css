@@ -294,7 +294,7 @@
 
     /* transition: transform .2s ease-in-out;  */
 }
-/* .practice .box::before{
+.practice .box::before{
     content: "";
     position: relative;
     left: 0;
@@ -305,17 +305,17 @@
     -webkit-clip-path: inset(var(--inset-top) var(--inset-right) var(--inset-bottom) var(--inset-left));
             clip-path: inset(var(--inset-top) var(--inset-right) var(--inset-bottom) var(--inset-left));
     transition: 0.4s linear;
-    overflow: hidden;
-} */
+    /* overflow: hidden; */
+}
 .practice .card:hover{
-    background-color: var(--grey-color);
-    /* --inset-top: 0;
+    /* background-color: var(--grey-color); */
+    --inset-top: 0;
     --inset-right: 0;
     --inset-bottom: 0;
     --inset-left: 0;
     -webkit-clip-path: inset(var(--inset-top) var(--inset-right) var(--inset-bottom) var(--inset-left));
             clip-path: inset(var(--inset-top) var(--inset-right) var(--inset-bottom) var(--inset-left));
-     */
+    
 }
 .practice .card:hover p{
     color: var(--white);

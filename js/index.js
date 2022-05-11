@@ -246,30 +246,36 @@ const areatwo = document.getElementById('case-by-case');
 
 optionone.addEventListener('click',(e)=>{
   e.preventDefault();
-  // optionone.setAttribute('checked');
-  // optiontwo.removeAttribute('checked')
+  $('.switch label').on('click', function(){
+    var indicator = $(this).parent('.switch').find('span');
+    if ( $(this).hasClass('right') ){
+      $(indicator).addClass('right');
+    } else {
+      $(indicator).removeClass('right');
+    }
+  });
+  optionone.setAttribute('checked','checked');
+  optiontwo.removeAttribute('checked')
   if(areaone.style.display === 'none'){
     areaone.style.display = 'block';
     areatwo.style.display = 'none';
-    // if(spanright.hasAttribute('class') == 'right'){
-    //   spanright.classList.remove('right');
-    // } else{
-    //   spanright.classList.add('right');
-    // }
   }
 });
 optiontwo.addEventListener('click', (e)=>{
   e.preventDefault();
-  // optiontwo.setAttribute('checked');
-  // optionone.removeAttribute('checked')
+  $('.switch label').on('click', function(){
+    var indicator = $(this).parent('.switch').find('span');
+    if ( $(this).hasClass('right') ){
+      $(indicator).addClass('right');
+    } else {
+      $(indicator).removeClass('right');
+    }
+  });
+  optiontwo.setAttribute('checked','checked');
+  optionone.removeAttribute('checked')
   if(areatwo.style.display === 'none'){
     areatwo.style.display = 'block';
     areaone.style.display = 'none';
-    // if(spanright.hasAttribute('class') == 'right'){
-    //   spanright.classList.remove('right');
-    // } else{
-    //   spanright.classList.add('right');
-    // }
   }
 });
 // pagination

@@ -33,6 +33,10 @@
     font-weight: 700;
     font-size: 48px;
 }
+.about-us .quotes{
+    position: absolute;
+    left: 3%;
+}
 .content{
     background-color: var(--dark-white);
     /* background-color: var(--main-color); */
