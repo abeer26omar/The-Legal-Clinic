@@ -32,6 +32,22 @@ $(document).ready(function(){
   });
 
 
+//testimonials
+// $(document).ready(function(){
+//   $(".owl-carousel").owlCarousel({
+//       items:2,
+//       itemsDesktop:[1000,2],
+//       itemsDesktopSmall:[979,2],
+//       itemsTablet:[768,2],
+//       itemsMobile:[650,1],
+//       pagination:true,
+//       navigation:false,
+//       slideSpeed:1000,
+//       autoPlay:true
+//   });
+// });
+
+
 // navbar Sticky
 // $(window).on('scroll',function() {
 // 	var stickytop = $('.nav-style');
@@ -237,46 +253,5 @@ $(window).on("scroll", function() {
 //   }
 // });
 
-const spanright = document.getElementById('span-right');
-const optionone = document.getElementById('optionone');
-const optiontwo = document.getElementById('optiontwo');
-
-const areaone = document.getElementById('program-365');
-const areatwo = document.getElementById('case-by-case');
-
-optionone.addEventListener('click',(e)=>{
-  e.preventDefault();
-  $('.switch label').on('click', function(){
-    var indicator = $(this).parent('.switch').find('span');
-    if ( $(this).hasClass('right') ){
-      $(indicator).addClass('right');
-    } else {
-      $(indicator).removeClass('right');
-    }
-  });
-  optionone.setAttribute('checked','checked');
-  optiontwo.removeAttribute('checked')
-  if(areaone.style.display === 'none'){
-    areaone.style.display = 'block';
-    areatwo.style.display = 'none';
-  }
-});
-optiontwo.addEventListener('click', (e)=>{
-  e.preventDefault();
-  $('.switch label').on('click', function(){
-    var indicator = $(this).parent('.switch').find('span');
-    if ( $(this).hasClass('right') ){
-      $(indicator).addClass('right');
-    } else {
-      $(indicator).removeClass('right');
-    }
-  });
-  optiontwo.setAttribute('checked','checked');
-  optionone.removeAttribute('checked')
-  if(areatwo.style.display === 'none'){
-    areatwo.style.display = 'block';
-    areaone.style.display = 'none';
-  }
-});
 // pagination
 

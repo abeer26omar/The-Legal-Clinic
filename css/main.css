@@ -467,11 +467,23 @@ nav .navbar-toggler.show span:nth-child(3) {
 .site-footer{
     background: var(--background-gradient);
 }
+@media screen and (max-width: 991.5px) {
+  .site-footer .spec-logo{
+    display: flex;
+    align-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 575.5px) {
+  .site-footer .spec-logo{
+    justify-content: center;
+  }
+}
 .site-footer .work-time{
     color: var(--white);
     padding-top: 3rem;
     font-style: normal;
-    font-size: .9rem;
+    font-size: .8rem;
     font-weight: 500;
 }
 
@@ -481,7 +493,7 @@ nav .navbar-toggler.show span:nth-child(3) {
     font-weight: 400;
 }
 .site-footer .footer-widget__contact li{
-    padding-top: 2rem;
+    padding-top: 1.5rem;
 
 }
 .site-footer li a {
@@ -570,7 +582,9 @@ nav .navbar-toggler.show span:nth-child(3) {
 }
 @media screen and (max-width: 767.5px) {
   .lines-about ,
-  .circles-about{
+  .circles-about,
+  .xshades-about,
+  .circleshadow-about{
     display: none;
   }
 }

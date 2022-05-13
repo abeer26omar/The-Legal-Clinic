@@ -47,6 +47,7 @@
     clip-path: polygon(0 33%, 100% 0%, 100% 67%, 0 100%);
     padding: 200px 0;
 }
+
 /* .about-us .row{
     padding-top: 11%;
 }
@@ -118,6 +119,12 @@
         top: calc(100% + 47rem);
     }
 }
+
+/* @media screen and (max-width: 425px) {
+    .linesbreak{
+        top: calc(100% + 62rem);
+    }
+} */
 /* our partners */
 .linesbreak-two{
     position: absolute;
@@ -152,6 +159,17 @@
 @media screen and (max-width: 575.5px) {
     .dotscircle-two {
         top: calc(100% + 146rem);
+    }
+}
+@media screen and (max-width: 429.5px) {
+    .content{
+        padding: 285px 0;
+    }
+    .linesbreak ,.linesbreak-two{
+        top: calc(100% + 62rem);
+    }
+    .dotscircle-two{
+        top: calc(100% + 165rem);
     }
 }
 /* our goal */

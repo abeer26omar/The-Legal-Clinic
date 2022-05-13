@@ -1,5 +1,5 @@
 :root{
-    --form-height:600px;
+    --form-height:650px;
     --form-width: 900px;
     --form-991-width: 450px;
     --form-991-height: 850px;
@@ -19,7 +19,7 @@
 .overlay{
     width: 100%;
     position: absolute;
-    top: 62px;
+    top: 90px;
     height: 470;
     /* z-index: 100; */
     /* border-radius: 10px ; */
@@ -79,7 +79,7 @@
 .form.active{
   left: 0%;
 }
-.form .sign-in , .form .sign-up{
+.form .sign-in , .form .sign-up ,.form .forget-pass{
   --padding: 50px;
   width: calc(var(--form-width) - 285px - var(--padding) * 2);
   height: 100%;
@@ -91,6 +91,20 @@
   padding: 0px var(--padding);
   text-align: center;
   transition: 0.5s ease-in-out;
+  animation-duration: .4s;
+  animation-name: animate-login;
+}
+
+@keyframes animate-login{
+  0%{
+    transform: scale(1,1);
+  }
+  50%{
+    transform: scale(1.1,1.1);
+  }
+  100%{
+    transform: scale(1,1);
+  }
 } 
 
 .form .sign-in{
@@ -99,24 +113,31 @@
 }
 .form.active .sign-in{
   left: auto;
-  transition-delay: 0.25s;
+  animation-duration: .4s;
+  animation-name: animate-login;
+
 }
 .form .sign-up{
   transition-delay: 0s;
 }
 .form.form.active .sign-up{
   left: -150%;
-  transition-delay: 0.25s;
+  animation-name: animate-login;
+  animation-duration: .4s;
 }
 
 .form h2{
     color: var(--main-color); 
     /* padding-bottom: 1rem; */
 }
-.form p{
+.form p a{
     color: var(--sec-color);
     font-weight: 400;
     margin: 10px;
+}
+.form p a:hover{
+  /* color: var(--main-color); */
+  color: #DD4B39;
 }
 .social-media-buttons {
   margin: 15px;
@@ -214,4 +235,9 @@
     padding: 3.5rem !important;
   }
 } 
-  
+.backtohome{
+  color:  #A49EAC;
+}
+#forgetpass{
+  display: none;
+}
