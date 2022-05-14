@@ -879,7 +879,24 @@
      <script src="js/isotope.js"></script>
      <script src="js/index.js"></script>
      <script>
-       
+              $('.switch label').on('click', function(){
+              var indicator = $(this).parent('.switch').find('span');
+              if ( $(this).hasClass('right') ){
+                $(indicator).addClass('right');
+                if(areatwo.style.display === 'none'){
+              areatwo.style.display = 'block';
+              areaone.style.display = 'none';
+            }
+              } else {
+                $(indicator).removeClass('right');
+                       
+            if(areaone.style.display === 'none'){
+              areaone.style.display = 'block';
+              areatwo.style.display = 'none';
+            }
+                
+              }
+            });
           const spanright = document.getElementById('span-right');
           const optionone = document.getElementById('optionone');
           const optiontwo = document.getElementById('optiontwo');
@@ -887,40 +904,26 @@
           const areaone = document.getElementById('program-365');
           const areatwo = document.getElementById('case-by-case');
 
-          optionone.addEventListener('click',(e)=>{
-            e.preventDefault();
-            $('.switch label').on('click', function(){
-              var indicator = $(this).parent('.switch').find('span');
-              if ( $(this).hasClass('right') ){
-                $(indicator).addClass('right');
-              } else {
-                $(indicator).removeClass('right');
-              }
-            });
-            // optionone.setAttribute('checked','checked');
-            // optiontwo.removeAttribute('checked')
-            if(areaone.style.display === 'none'){
-              areaone.style.display = 'block';
-              areatwo.style.display = 'none';
-            }
-          });
-          optiontwo.addEventListener('click', (e)=>{
-            e.preventDefault();
-            $('.switch label').on('click', function(){
-              var indicator = $(this).parent('.switch').find('span');
-              if ($(this).hasClass('right') ){
-                $(indicator).addClass('right');
-              } else {
-                $(indicator).removeClass('right');
-              }
-            });
-            // optiontwo.setAttribute('checked','checked');
-            // optionone.removeAttribute('checked')
-            if(areatwo.style.display === 'none'){
-              areatwo.style.display = 'block';
-              areaone.style.display = 'none';
-            }
-          });
+          // optionone.addEventListener('click',(e)=>{
+          //   e.preventDefault();
+
+          //   // optionone.setAttribute('checked','checked');
+          //   // optiontwo.removeAttribute('checked')
+          //   if(areaone.style.display === 'none'){
+          //     areaone.style.display = 'block';
+          //     areatwo.style.display = 'none';
+          //   }
+          // });
+          // optiontwo.addEventListener('click', (e)=>{
+          //   e.preventDefault();
+            
+          //   // optiontwo.setAttribute('checked','checked');
+          //   // optionone.removeAttribute('checked')
+          //   if(areatwo.style.display === 'none'){
+          //     areatwo.style.display = 'block';
+          //     areaone.style.display = 'none';
+          //   }
+          // });
      </script>
 </body>
 </html>
