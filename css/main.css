@@ -75,6 +75,11 @@ body{
 a{
     text-decoration: none;
 }
+button:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: none;
+}
 .main-content{
     background-image: url('../images/bgImage\ \(2\).svg');
     background-repeat: no-repeat;
@@ -734,3 +739,76 @@ nav .navbar-toggler.show span:nth-child(3) {
   padding: 4.5rem 0;
   overflow: hidden;
 }
+/* modal */
+.modal .modal-header ,.modal .modal-footer{
+  border-top: none;
+  border-bottom: none;
+}
+.modal .modal-content{
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: var(--white);
+  border-radius: 0;
+}
+.modal .modal-header{
+  justify-content: center;
+  padding: 0 0 1rem;
+}
+.modal .modal-header .modal-title{
+  color: var(--main-color);
+}
+.modal .btn{
+  outline: none !important;
+}
+.modal .btn:focus{
+  text-decoration: none;
+  outline: 0;
+  box-shadow: none;
+}
+.modal .modal-body{
+  padding: 1rem 2rem;
+}
+.modal .modal-body .form-control{
+  /* padding: .5rem 0; */
+  border-color: var(--main-color);
+  border-radius: 10px;
+  color: var(--sec-color) !important;
+  
+}
+.modal .modal-footer .btn-getin{
+  padding: .5rem 2rem;
+  font-size: 1rem;
+}
+.modal .modal-body .form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--sec-color);
+  opacity: 0.6; /* Firefox */
+}
+
+.modal .modal-body .form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: var(--sec-color);
+  opacity: 0.6;
+}
+
+.modal .modal-body .form-control::-ms-input-placeholder { /* Microsoft Edge */
+  color: var(--sec-color);
+  opacity: 0.6;
+}
+.modal .g-4, .modal .gy-4 {
+  --bs-gutter-y: 2rem;
+}
+.modal .g-4, .modal .gx-4 {
+  --bs-gutter-x: 2rem;
+}
+.btn-getin{
+  background-color: var(--main-color);
+  color: var(--white);
+  /* height: 3.5rem; */
+  font-size: 1.3rem;
+  /* width: 25%; */
+  padding: 1.3rem 4rem;
+  border-radius: 0;
+
+}
+
+.btn-getin:hover{
+  color: var(--white);
+} 

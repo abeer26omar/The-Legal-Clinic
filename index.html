@@ -30,7 +30,7 @@
                   <nav class="navbar navbar-expand-lg nav-style bg-style navbar-text-light pt-4">
                     <div class="col-auto col-lg-2"> 
                         <!-- Logo --> 
-                        <a class="logo pt-4" href="#" title="legal-clinic-logo"><img src="images/logo-nav.svg" alt="" width="100%"></a>  
+                        <a class="logo pt-4" href="index.html" title="legal-clinic-logo"><img src="images/logo-nav.svg" alt="" width="100%"></a>  
                         <!-- Logo End --> 
                       </div>
                       <div class="col col-lg-8  align-self-start">
@@ -64,7 +64,7 @@
                     <div class="social-icons col-auto col-lg-2 d-flex justify-content-end">
                       <div class=" social-icons-light mb-0 d-flex">
                         <!-- <li></li> -->
-                        <a href="#" class="search-toggler align-self-center" style="padding-right: 4rem;"><img src="images/search-icon.svg" alt=""></a>
+                        <a href="#" class="search-toggler align-self-center" style="margin-right: 4rem;"><img src="images/search-icon.svg" alt=""></a>
                         <!-- <li> -->
                           <div class="dropdown">
                             <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
@@ -120,10 +120,10 @@
                       <img src="images/sliderimg.svg" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                      <img src="images/4 (2) 1.svg" class="d-block w-100" alt="...">
+                      <img src="images/4.png" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                      <img src="images/sliderimg.svg" class="d-block w-100" alt="...">
+                      <img src="images/2.png" class="d-block w-100" alt="...">
                     </div>
                   </div>
                   <div class="carousal-shapes">
@@ -207,7 +207,7 @@
               the two major realms of Classical physics: Newtonian mechanics </p> -->
           </div>
           <div class="main-box">
-            <div class="row justify-content-center pb-4">
+            <div class="row justify-content-center pb-5">
               <div class="col-12 col-md-6 col-lg-5 col-xl-5">
                 <div class="card spec-box" onclick="" style="cursor: pointer;">
                   <span class="yellow-circle">
@@ -230,7 +230,7 @@
                  </div>
               </div>
             </div>
-            <div class="row justify-content-center spec-justify g-4">
+            <div class="row justify-content-center spec-justify g-4 pt-5">
               <div class="col-12 col-sm-6 col-lg-3 col-xl-2 box" onclick="location.href='https://unruffled-hugle.45-76-42-208.plesk.page/';" style="cursor: pointer;">
                   <div class="card h-100">
                     <svg width="58" height="57" viewBox="0 0 58 57" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -332,9 +332,9 @@
               <div class="card contact-data phone justify-content-center">
                 <div class="phone-details">
                   <div class="icon-phone">
-                    <img src="images/icn settings .icn-xl (1).svg" alt="phone" >
+                    <img src="images/icn settings .icn-xl (1).svg" alt="phone">
                     <p>View our locations around the world <br> and find contact details for your <br> nearest office.</p>
-                    <button class="btn btn-contact">Locate the Nerest Office</button>
+                    <button class="btn btn-contact" onclick="location.href='contact.html'">Locate the Nerest Office</button>
                   </div>
                 </div>
               </div>
@@ -346,7 +346,7 @@
                     <img src="images/email.svg" alt="email" >
                     <h6>Drop Line</h6>
                     <p>You may contact us by filling in this form<br> any time you need professional<br> support.</p>
-                    <button class="btn btn-email">Fill Our Form</button>
+                    <button class="btn btn-email" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button">Fill Our Form</button>
                   </div>
                 </div>
               </div>
@@ -355,7 +355,7 @@
               <div class="card contact-data careers justify-content-center">
                 <div class="careers-details">
                   <div class="icon-careers">
-                    <img src="images/clarity_users-line (1).svg" alt="careers" >
+                    <img src="images/clarity_users-line (1).svg" alt="careers">
                     <h6>Careers</h6>
                     <p>Join the world's largest consulting <br>organization with a unique position.</p>
                     <button class="btn btn-contact">Submit Request</button>
@@ -376,6 +376,52 @@
           </div>
         </div>
       </section>
+      <!-- Modal -->
+      <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="d-flex justify-content-end">
+              <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"><img src="images/ant-design_close-circle-outlined.svg" alt=""></button>
+            </div>
+            <div class="modal-header">
+              <h5 class="modal-title text-center" id="exampleModalLabel">Please fill out the form below to inquire about our work</h5>
+            </div>
+            <div class="modal-body">
+              <form class="row g-4">
+                <div class="col-md-6">
+                  <!-- <label for="inputEmail4" class="form-label">Email</label> -->
+                  <input type="email" class="form-control" id="inputEmail4" placeholder="Name">
+                </div>
+                <div class="col-md-6">
+                  <!-- <label for="inputPassword4" class="form-label">Password</label> -->
+                  <input type="password" class="form-control" id="inputPassword4" placeholder="Email">
+                </div>
+                <div class="col-12">
+                  <!-- <label for="inputAddress" class="form-label">Address</label> -->
+                  <input type="text" class="form-control" id="inputAddress" placeholder="Organization">
+                </div>
+                <div class="col-12">
+                  <!-- <label for="inputAddress2" class="form-label">Address 2</label> -->
+                  <input type="text" class="form-control" id="inputAddress2" placeholder="Subject">
+                </div>
+                <div class="col-12">
+                  <!-- <div class="form-floating"> -->
+                    <textarea class="form-control" placeholder="Describe briefly" id="floatingTextarea2" style="height: 100px;resize: none;"></textarea>
+                    <!-- <label for="floatingTextarea2">Comments</label> -->
+                  <!-- </div> -->
+                </div>
+              </div>
+              <div class="modal-footer justify-content-center">
+                <!-- <div class="col-12"> -->
+                  <button type="submit" class="btn btn-getin">Lets Go</button>
+                <!-- </div> -->
+                <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+              </form>
+          </div>
+        </div>
+      </div>
       <!-- Clients Testimonial -->
       <section class="testimonial">
         <div class="container">
