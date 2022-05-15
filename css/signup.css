@@ -1,8 +1,8 @@
 :root{
-    --form-height:650px;
+    --form-height:750px;
     --form-width: 900px;
     --form-991-width: 450px;
-    --form-991-height: 850px;
+    --form-991-height: 950px;
   }
   .papage-wraper {
    transition: 0.5s; 
@@ -19,7 +19,7 @@
 .overlay{
     width: 100%;
     position: absolute;
-    top: 90px;
+    top: 125px;
     height: 470;
     /* z-index: 100; */
     /* border-radius: 10px ; */
@@ -213,14 +213,14 @@
   }
   .form{
     width: 100%;
-    height: 600px;
+    height: 700px;
     top: 0;
     left: 0;
   }
   .overlay .box{
     position: absolute;
     width: 100%;
-    height: 250px;
+    height: 220px;
     bottom: 0;
   }
   .box.sign-up{

@@ -37,40 +37,17 @@
                         <div class="sign-in" id="sign-in-info">
                             <div class="px-5 py-5">
                               <h2>Sign In</h2>
-                            <div class="social-media-buttons row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 justify-content-evenly">
-                              <div class="icon col">
-                                <a href="http://">
-                                  <svg viewBox="0 0 24 24">
-                                    <path fill="#000000" d="M17,2V2H17V6H15C14.31,6 14,6.81 14,7.5V10H14L17,10V14H14V22H10V14H7V10H10V6A4,4 0 0,1 14,2H17Z" />
-                                  </svg>
-                                </a>
-                              </div>
-                              <div class="icon col">
-                                <a href="http://">
-                                  <svg viewBox="0 0 24 24">
-                                    <path fill="#000000" d="M23,11H21V9H19V11H17V13H19V15H21V13H23M8,11V13.4H12C11.8,14.4 10.8,16.4 8,16.4C5.6,16.4 3.7,14.4 3.7,12C3.7,9.6 5.6,7.6 8,7.6C9.4,7.6 10.3,8.2 10.8,8.7L12.7,6.9C11.5,5.7 9.9,5 8,5C4.1,5 1,8.1 1,12C1,15.9 4.1,19 8,19C12,19 14.7,16.2 14.7,12.2C14.7,11.7 14.7,11.4 14.6,11H8Z" />
-                                  </svg>
-                                </a>
-                              </div>
-                              <div class="icon col">
-                                <a href="http://">
-                                  <svg viewBox="0 0 24 24">
-                                    <path fill="#000000" d="M21,21H17V14.25C17,13.19 15.81,12.31 14.75,12.31C13.69,12.31 13,13.19 13,14.25V21H9V9H13V11C13.66,9.93 15.36,9.24 16.5,9.24C19,9.24 21,11.28 21,13.75V21M7,21H3V9H7V21M5,3A2,2 0 0,1 7,5A2,2 0 0,1 5,7A2,2 0 0,1 3,5A2,2 0 0,1 5,3Z" />
-                                  </svg>
-                                </a>
-                              </div>
-                            </div>
-                            <p class="small">or use your email account:</p>
+
                             <form id="sign-in-form" class="row gx-0">     
                               <div class="col-12">
-                                <input type="email" class="form-control" placeholder="Email"/>
+                                <input type="email" class="form-control" placeholder="Email" id="emailSignin"/>
                               </div> 
                               <div class="col-12">
-                                <input type="password" class="form-control" placeholder="Password"/>
+                                <input type="password" class="form-control" placeholder="Password" id="passSignin"/>
                               </div>
                               <p class="forgot-password"><a href="#" onclick="getforget()">Forgot your password?</a></p>
                               <div class="12">
-                                <button class="control-button in btn" type="submit">Sign In</button>
+                                <button class="control-button in btn" type="submit" id="btnSignin">Sign In</button>
                               </div>
                             </form>
                             <a href="index.html" class="backtohome"> Back to Home &gt;&gt; </a>
@@ -79,30 +56,7 @@
                         <div class="forget-pass" id="forgetpass">
                           <div class="px-5 py-5">
                             <h2>Forgot your password?</h2>
-                          <!-- <div class="social-media-buttons row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 justify-content-evenly">
-                            <div class="icon col">
-                              <a href="http://">
-                                <svg viewBox="0 0 24 24">
-                                  <path fill="#000000" d="M17,2V2H17V6H15C14.31,6 14,6.81 14,7.5V10H14L17,10V14H14V22H10V14H7V10H10V6A4,4 0 0,1 14,2H17Z" />
-                                </svg>
-                              </a>
-                            </div>
-                            <div class="icon col">
-                              <a href="http://">
-                                <svg viewBox="0 0 24 24">
-                                  <path fill="#000000" d="M23,11H21V9H19V11H17V13H19V15H21V13H23M8,11V13.4H12C11.8,14.4 10.8,16.4 8,16.4C5.6,16.4 3.7,14.4 3.7,12C3.7,9.6 5.6,7.6 8,7.6C9.4,7.6 10.3,8.2 10.8,8.7L12.7,6.9C11.5,5.7 9.9,5 8,5C4.1,5 1,8.1 1,12C1,15.9 4.1,19 8,19C12,19 14.7,16.2 14.7,12.2C14.7,11.7 14.7,11.4 14.6,11H8Z" />
-                                </svg>
-                              </a>
-                            </div>
-                            <div class="icon col">
-                              <a href="http://">
-                                <svg viewBox="0 0 24 24">
-                                  <path fill="#000000" d="M21,21H17V14.25C17,13.19 15.81,12.31 14.75,12.31C13.69,12.31 13,13.19 13,14.25V21H9V9H13V11C13.66,9.93 15.36,9.24 16.5,9.24C19,9.24 21,11.28 21,13.75V21M7,21H3V9H7V21M5,3A2,2 0 0,1 7,5A2,2 0 0,1 5,7A2,2 0 0,1 3,5A2,2 0 0,1 5,3Z" />
-                                </svg>
-                              </a>
-                            </div>
-                          </div> -->
-                          <!-- <p class="small">or use your email account:</p> -->
+                          
                           <form id="sign-in-form" class="row gx-0">     
                             <div class="col-12">
                               <input type="email" class="form-control" placeholder="Email"/>
@@ -124,45 +78,31 @@
                           <div class="sign-up" id="sign-up-info">
                            <div class="px-5 py-5">
                             <h2>Create Account</h2>
-                            <div class="social-media-buttons row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 justify-content-evenly">
-                              <div class="icon col">
-                                <a href="http://">
-                                  <svg viewBox="0 0 24 24">
-                                    <path fill="#000000" d="M17,2V2H17V6H15C14.31,6 14,6.81 14,7.5V10H14L17,10V14H14V22H10V14H7V10H10V6A4,4 0 0,1 14,2H17Z" />
-                                  </svg>
-                                </a>
-                              </div>
-                              <div class="icon col">
-                                <a href="http://">
-                                  <svg viewBox="0 0 24 24">
-                                    <path fill="#000000" d="M23,11H21V9H19V11H17V13H19V15H21V13H23M8,11V13.4H12C11.8,14.4 10.8,16.4 8,16.4C5.6,16.4 3.7,14.4 3.7,12C3.7,9.6 5.6,7.6 8,7.6C9.4,7.6 10.3,8.2 10.8,8.7L12.7,6.9C11.5,5.7 9.9,5 8,5C4.1,5 1,8.1 1,12C1,15.9 4.1,19 8,19C12,19 14.7,16.2 14.7,12.2C14.7,11.7 14.7,11.4 14.6,11H8Z" />
-                                  </svg>
-                                </a>
-                              </div>
-                              <div class="icon col">
-                              <a href="http://">
-                                <svg viewBox="0 0 24 24">
-                                  <path fill="#000000" d="M21,21H17V14.25C17,13.19 15.81,12.31 14.75,12.31C13.69,12.31 13,13.19 13,14.25V21H9V9H13V11C13.66,9.93 15.36,9.24 16.5,9.24C19,9.24 21,11.28 21,13.75V21M7,21H3V9H7V21M5,3A2,2 0 0,1 7,5A2,2 0 0,1 5,7A2,2 0 0,1 3,5A2,2 0 0,1 5,3Z" />
-                                </svg>
-                              </a>
-                              </div>
-                            </div>
-                            <p class="small">or use your email for registration:</p>
+                        
                             <form id="sign-up-form" class="row gx-0">
-                              <div class="col-12">
-                                <input type="text" class="form-control" placeholder="Name"/>
+                              <div class="col-6 " style="padding-right: .5rem;">
+                                <input type="text" class="form-control" placeholder="First Name" id="inputFname"/>
+                              </div>
+                              <div class="col-6 ">
+                                <input type="text" class="form-control" placeholder="Last Name" id="inputLname"/>
                               </div>
                               <div class="col-12">
-                                <input type="email" class="form-control" placeholder="Email"/>
+                                <input type="email" class="form-control" placeholder="Email" id="inputEmail"/>
                               </div>
                               <div class="col-12">
-                                <input type="text" class="form-control" placeholder="Phone"/>
+                                <input type="text" class="form-control" placeholder="Phone" id="inputPhone"/>
                               </div>
                               <div class="col-12">
-                                <input type="password" class="form-control" placeholder="Password"/>
+                                <input type="text" class="form-control" placeholder="Company" id="inputComp"/>
                               </div>
                               <div class="col-12">
-                                <button class="control-button up btn" type="submit">Sign Up</button>
+                                <input type="password" class="form-control" placeholder="Password" id="inputPass"/>
+                              </div>
+                              <div class="col-12">
+                                <input type="password" class="form-control" placeholder="Confirm Password" id="inputConfPass"/>
+                              </div>
+                              <div class="col-12">
+                                <button class="control-button up btn" type="submit" id="btnSignup">Sign Up</button>
                               </div>
                             </form>
                             <a href="index.html" class="backtohome">Back to Home &gt;&gt;</a>
@@ -178,18 +118,38 @@
      <script src="js/popper.js"></script>
      <script src="css/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
     <script>
+      
+      let emailPattern = /^(\D)+(\w)*((\.(\w)+)?)+@(\D)+(\w)*((\.(\D)+(\w)*)+)?(\.)[a-z]{2,}$/;
+      let phonePattern = /1?-?\.?\(?\d{3}[\-\)\.\s]?\d{3}[\-\.\s]?\d{4}/;
       const signinbtn = document.querySelector('#slide-right-button');
       const signupbtn = document.querySelector('#slide-left-button');
       const formbox = document.querySelector('.form');
 
+      const btnSignup = document.getElementById('btnSignup');
+      const btnSignin = document.getElementById('btnSignin');
+      const signupform = document.getElementById('sign-up-form');
+
+      const inputFname = document.getElementById('inputFname');
+      const inputLname = document.getElementById('inputLname');
+      const inputEmail = document.getElementById('inputEmail');
+      const inputPhone = document.getElementById('inputPhone');
+      const inputComp = document.getElementById('inputComp');
+      const inputPass = document.getElementById('inputPass');
+      const inputConfPass = document.getElementById('inputConfPass');
+      const emailSignin = document.getElementById('emailSignin');
+      const passSignin = document.getElementById('passSignin');
+
+
       const forgetpass = document.getElementById('forgetpass');
       const signininfo = document.getElementById('sign-in-info');
+
       signinbtn.addEventListener('click',(e)=>{
         e.preventDefault();
         formbox.classList.add('active');
         forgetpass.style.display = 'none';
-        signininfo.style.display = 'block';
+        signininfo.style.display = 'flex';
       });
+
       signupbtn.addEventListener('click',(e)=>{
         e.preventDefault();
         formbox.classList.remove('active');
@@ -197,11 +157,111 @@
       });
       function getforget(){
         signininfo.style.display = 'none';
-        forgetpass.style.display = 'block';
+        forgetpass.style.display = 'flex';
       }
       function backtosignin(){
-        signininfo.style.display = 'block';
+        signininfo.style.display = 'flex';
         forgetpass.style.display = 'none';
+      }
+
+      btnSignup.addEventListener('click',(e)=>{
+        e.preventDefault();
+        formValidation();
+      });
+
+      btnSignin.addEventListener('click',(e)=>{
+        e.preventDefault();
+        signinValidation();
+      })
+      function formValidation(){
+        let arrayValid = [];
+        if(inputFname.value == ''){
+          inputFname.style.border = "1px solid red";
+          arrayValid.push(false);
+        }else{
+          inputFname.style.border = "none";
+          arrayValid.push(true); 
+        }
+        if(inputLname.value == ''){
+          inputLname.style.border = "1px solid red";
+          arrayValid.push(false);
+        }else{
+          inputLname.style.border = "none";
+          arrayValid.push(true); 
+        }
+        if(inputEmail.value == ''){
+          inputEmail.style.border = "1px solid red";
+          arrayValid.push(false);
+        }else{
+          if(!(emailPattern.test(inputEmail.value))){
+            inputEmail.style.border = "1px solid red";
+            arrayValid.push(false);
+          }else{
+            inputEmail.style.border = "none";
+            arrayValid.push(true); 
+          }
+        }
+        if(inputPhone.value == ''){
+          inputPhone.style.border = "1px solid red";
+          arrayValid.push(false);
+        }else{
+          if(!(phonePattern.test(inputPhone.value))){
+            inputPhone.style.border = "1px solid red";
+            arrayValid.push(false);
+          }else{
+            inputPhone.style.border = "none";
+            arrayValid.push(true); 
+          }
+        }
+        if(inputComp.value == ''){
+          inputComp.style.border = "1px solid red";
+          arrayValid.push(false);
+        }else{
+          inputComp.style.border = "none";
+          arrayValid.push(true); 
+        }
+        if(inputPass.value == ''){
+          inputPass.style.border = "1px solid red";
+          arrayValid.push(false);
+        }else{
+          if(inputPass.value.length < 5){
+            inputPass.style.border = "1px solid red";
+            arrayValid.push(false);
+          }else{
+            inputPass.style.border = "none";
+            arrayValid.push(true); 
+          }
+        }
+        if(inputConfPass.value == ''){
+          inputConfPass.style.border = "1px solid red";
+          arrayValid.push(false);
+        }else{
+          if(inputConfPass.value !== inputPass.value){
+            inputConfPass.style.border = "1px solid red";
+            arrayValid.push(false);
+          }else{
+            inputConfPass.style.border = "none";
+            arrayValid.push(true); 
+          }
+        }
+        // console.log(arrayValid);
+      }
+      function signinValidation(){
+        arrsigninValid = [];
+        if(emailSignin.value == ''){
+          emailSignin.style.border = "1px solid red";
+          arrsigninValid.push(false);
+        }else{
+          emailSignin.style.border = "none";
+          arrsigninValid.push(true); 
+        }
+        if(passSignin.value == ''){
+          passSignin.style.border = "1px solid red";
+          arrsigninValid.push(false);
+        }else{
+          passSignin.style.border = "none";
+          arrsigninValid.push(true); 
+        }
       }
     </script>
 </body>

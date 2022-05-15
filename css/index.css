@@ -147,6 +147,11 @@
     border-radius: 15px;
     /* overflow: hidden; */
 }
+.carousel-inner .content{
+    position: absolute;
+    bottom: 12%;
+    right: 2%;
+}
 .carousel-indicators [data-bs-target]{
     width: 17px;
     height: 17px;
@@ -247,6 +252,9 @@
     color: var(--main-color);
     letter-spacing: 0.1px;
     padding-top: 1rem;
+}
+.practice span.small{
+    color: #DD4B39;
 }
 .practice .spec-box p{
     color: var(--bg-color);
@@ -378,7 +386,11 @@
     background-color: var(--dark-white);
     padding-top: 50px;
     padding-bottom: 80px;
-
+}
+@media screen and (max-width: 425px) {
+    .get-in-touch{
+        display: none;
+    }
 }
 .get-in-touch .title h2{
     color: var(--main-color);

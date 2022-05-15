@@ -498,7 +498,7 @@ nav .navbar-toggler.show span:nth-child(3) {
     font-weight: 400;
 }
 .site-footer .footer-widget__contact li{
-    padding-top: 1.5rem;
+    padding-top: 0.5rem;
 
 }
 .site-footer li a {
@@ -521,6 +521,11 @@ nav .navbar-toggler.show span:nth-child(3) {
     .site-footer .row{
         text-align: center;
     }
+}
+@media screen and (max-width: 425px) {
+  .site-footer .spec-hide{
+    display: none !important;
+  }
 }
 /* shapes and titles */
 .about-content{
