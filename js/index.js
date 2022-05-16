@@ -264,6 +264,10 @@ const cardWrap = mainbox.querySelectorAll('.col-6');
             if(userAgent.match(/chrome|chromium|crios/i)){
                 browserName = "chrome";
               // document.querySelector('body').style.fontFamily  = 'Roboto, sans-serif';
+              [...cardWrap].forEach(element => {
+                element.classList.add('.mac');
+              });
+
             }
             else if(userAgent.match(/firefox|fxios/i)){
               browserName = "firefox";
@@ -285,7 +289,9 @@ const cardWrap = mainbox.querySelectorAll('.col-6');
             if (window.navigator.userAgent.indexOf("Mac") != -1) {
               console.log("OS is Mac/iOS");
               document.querySelector('body').style.fontFamily  = 'Roboto, sans-serif';
-              cardWrap.classList.add('mac');
+              [...cardWrap].forEach(element => {
+                element.classList.add('.mac');
+              });
               console.log('zft mac');
             } else{
               console.log('fgfhdh')
