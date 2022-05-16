@@ -315,7 +315,7 @@
     overflow: hidden;
     /* min-height: 150px; */
     transition:  .2s ease-in-out; 
-    align-items: stretch;
+    /* align-items: stretch; */
     
 }
 /* .practice .box::before{
