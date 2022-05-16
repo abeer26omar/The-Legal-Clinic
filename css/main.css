@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=El+Messiri&family=Inter&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=El+Messiri&family=Inter&family=Open+Sans:wght@600&display=swap');
-/* @import url('https://fonts.cdnfonts.com/css/gotham'); */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 /* global variables for fonts and color */
 :root {
     --main-font: 'Gotham', sans-serif;
     --sec-font : 'El Messiri', sans-serif;
-    --open-sans-font: 'Open Sans', sans-serif;;
+    --open-sans-font: 'Open Sans', sans-serif;
+    --safari-font: 'Roboto', sans-serif;
     --main-color: #000086;
     --sec-color: #041851;
     --org-color: #FDC041;
