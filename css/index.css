@@ -75,7 +75,15 @@
     color: var(--sec-color);
 }
 .main-slider p{
+    -webkit-font-size : 20px;
+    -moz-font-size : 20px;
+    -ms-font-size : 20px;
+    -o-font-size : 20px;
     font-size: 20px;
+    -webkit-font-weight : 700;
+    -moz-font-weight : 700;
+    -ms-font-weight : 700;
+    -o-font-weight : 700;
     font-weight: 700;
     color: var(--main-color);
 }
