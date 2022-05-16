@@ -281,8 +281,11 @@ $(window).on('load',
         browserName="No browser detection";
       }
       if (window.navigator.userAgent.indexOf("Mac") != -1) {
-        // console.log("OS is Mac/iOS");
+        console.log("OS is Mac/iOS");
         document.querySelector('body').style.fontFamily  = 'Roboto, sans-serif';
+        console.log('zft mac');
+      } else{
+        console.log('fgfhdh')
       }
     console.log('your browser is : ' + browserName);
     //  document.querySelector("h1").innerText="You are using "+ browserName +" browser";         
