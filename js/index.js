@@ -254,3 +254,39 @@ $(window).on("scroll", function() {
 // });
 
 // pagination
+      $(window).on('load',
+        function fnBrowserDetect(){
+                       
+          let userAgent = navigator.userAgent;
+          let browserName;
+            if(userAgent.match(/chrome|chromium|crios/i)){
+                browserName = "chrome";
+              // document.querySelector('body').style.fontFamily  = 'Roboto, sans-serif';
+            }
+            else if(userAgent.match(/firefox|fxios/i)){
+              browserName = "firefox";
+            }  
+            else if(userAgent.match(/safari/i)){
+              browserName = "safari";
+              document.querySelector('body').style.fontFamily  = 'Roboto, sans-serif';
+            }
+            else if(userAgent.match(/opr\//i)){
+              browserName = "opera";
+            }
+            else if(userAgent.match(/edg/i)){
+              browserName = "edge";
+            }
+            else{
+              browserName="No browser detection";
+            }
+            if (window.navigator.userAgent.indexOf("Mac") != -1) {
+              console.log("OS is Mac/iOS");
+              document.querySelector('body').style.fontFamily  = 'Roboto, sans-serif';
+              console.log('zft mac');
+            } else{
+              console.log('fgfhdh')
+            }
+          console.log('your browser is : ' + browserName);
+          //  document.querySelector("h1").innerText="You are using "+ browserName +" browser";         
+         }
+      );
