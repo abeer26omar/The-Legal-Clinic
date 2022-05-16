@@ -254,6 +254,8 @@ $(window).on("scroll", function() {
 // });
 
 // pagination
+const mainbox = document.querySelector('.main-box');
+const cardWrap = mainbox.querySelectorAll('.col-6');
       $(window).on('load',
         function fnBrowserDetect(){
                        
@@ -269,6 +271,7 @@ $(window).on("scroll", function() {
             else if(userAgent.match(/safari/i)){
               browserName = "safari";
               document.querySelector('body').style.fontFamily  = 'Roboto, sans-serif';
+              cardWrap.classList.add('mac');
             }
             else if(userAgent.match(/opr\//i)){
               browserName = "opera";

@@ -302,7 +302,7 @@
     text-align: center;
     /* width: 190px; */
     border: none;
-    height: -webkit-fill-available;
+    /* height: -webkit-fill-available; */
     height: 100%;
     display: flex;
     justify-content: space-around;
@@ -318,18 +318,14 @@
     /* align-items: stretch; */
     
 }
-/* .practice .box::before{
-    content: "";
-    position: relative;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--grey-color);
-    -webkit-clip-path: inset(var(--inset-top) var(--inset-right) var(--inset-bottom) var(--inset-left));
-            clip-path: inset(var(--inset-top) var(--inset-right) var(--inset-bottom) var(--inset-left));
-    transition: 0.4s linear;
-} */
+.mac{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex:1 1 auto;
+}
 
 .practice .spec-box{
     background-color: var(--main-color);
