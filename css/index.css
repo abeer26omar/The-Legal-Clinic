@@ -157,8 +157,18 @@
 }
 .carousel-inner .content{
     position: absolute;
-    bottom: 12%;
-    right: 2%;
+    bottom: 5%;
+    right: 0%;
+}
+
+.carousel-inner .content .more{
+    color: var(--org-color);
+    font-size: 1.5rem;
+    background: rgba(0, 0, 0, 0.33);
+    padding: 1rem 2.5rem;
+}
+.carousel-inner .content .more:hover{
+    background: rgba(0, 0, 0,.7);
 }
 .carousel-indicators [data-bs-target]{
     width: 17px;
@@ -174,6 +184,9 @@
     }
     .main-slider{
         padding-top: 100px;
+    }
+    .carousel-indicators{
+        display: none;
     }
 }
 @media screen  and (max-width: 575px){
