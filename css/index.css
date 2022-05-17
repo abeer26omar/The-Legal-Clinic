@@ -329,7 +329,7 @@
 }
 .practice .main-box .col-6.mac .card{
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 .practice .spec-box{
     background-color: var(--main-color);
