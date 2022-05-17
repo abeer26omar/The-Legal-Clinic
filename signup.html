@@ -7,7 +7,6 @@
     <!-- css link -->
     <link rel="stylesheet" href="css/bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/fontawesome-free-6.1.1-web/css/all.min.css">
-    
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/signup.css">
 </head>
@@ -118,8 +117,8 @@
      <script src="js/jquery.js"></script>
      <script src="js/popper.js"></script>
      <script src="css/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+     <!-- <script src="js/index.js"></script> -->
     <script>
-      
       let emailPattern = /^(\D)+(\w)*((\.(\w)+)?)+@(\D)+(\w)*((\.(\D)+(\w)*)+)?(\.)[a-z]{2,}$/;
       let phonePattern = /1?-?\.?\(?\d{3}[\-\)\.\s]?\d{3}[\-\.\s]?\d{4}/;
       const signinbtn = document.querySelector('#slide-right-button');
@@ -264,6 +263,22 @@
           arrsigninValid.push(true); 
         }
       }
+       function fnBrowserDetect(){
+         let userAgent = navigator.userAgent;
+         let browserName;
+         if(userAgent.match(/safari/i)){
+           browserName = "safari";
+           document.querySelector('body').style.fontFamily  = 'Roboto, sans-serif';
+          } else{
+          document.querySelector('body').style.fontFamily  = 'Gotham, sans-serif';
+         }
+          if (window.navigator.userAgent.indexOf("Mac") != -1) {
+            // console.log("OS is Mac/iOS");
+            document.querySelector('body').style.fontFamily  = 'Roboto, sans-serif';
+          } else{
+          document.querySelector('body').style.fontFamily  = 'Gotham, sans-serif';
+         }
+        }
     </script>
 </body>
 </html>

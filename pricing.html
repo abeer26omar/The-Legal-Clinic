@@ -905,26 +905,22 @@
           const areaone = document.getElementById('program-365');
           const areatwo = document.getElementById('case-by-case');
 
-          // optionone.addEventListener('click',(e)=>{
-          //   e.preventDefault();
-
-          //   // optionone.setAttribute('checked','checked');
-          //   // optiontwo.removeAttribute('checked')
-          //   if(areaone.style.display === 'none'){
-          //     areaone.style.display = 'block';
-          //     areatwo.style.display = 'none';
-          //   }
-          // });
-          // optiontwo.addEventListener('click', (e)=>{
-          //   e.preventDefault();
-            
-          //   // optiontwo.setAttribute('checked','checked');
-          //   // optionone.removeAttribute('checked')
-          //   if(areatwo.style.display === 'none'){
-          //     areatwo.style.display = 'block';
-          //     areaone.style.display = 'none';
-          //   }
-          // });
+       function fnBrowserDetect(){
+         let userAgent = navigator.userAgent;
+         let browserName;
+         if(userAgent.match(/safari/i)){
+           browserName = "safari";
+           document.querySelector('body').style.fontFamily  = 'Roboto, sans-serif';
+          } else{
+          document.querySelector('body').style.fontFamily  = 'Gotham, sans-serif';
+         }
+          if (window.navigator.userAgent.indexOf("Mac") != -1) {
+            // console.log("OS is Mac/iOS");
+            document.querySelector('body').style.fontFamily  = 'Roboto, sans-serif';
+          } else{
+          document.querySelector('body').style.fontFamily  = 'Gotham, sans-serif';
+         }
+        }
      </script>
 </body>
 </html>

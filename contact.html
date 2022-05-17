@@ -371,5 +371,23 @@
      <script src="js/nouislider.js"></script>
      <script src="js/isotope.js"></script>
      <script src="js/index.js"></script>
+     <script>
+      function fnBrowserDetect(){
+        let userAgent = navigator.userAgent;
+        let browserName;
+        if(userAgent.match(/safari/i)){
+          browserName = "safari";
+          document.querySelector('body').style.fontFamily  = 'Roboto, sans-serif';
+         } else{
+          document.querySelector('body').style.fontFamily  = 'Gotham, sans-serif';
+         }
+         if (window.navigator.userAgent.indexOf("Mac") != -1) {
+           // console.log("OS is Mac/iOS");
+           document.querySelector('body').style.fontFamily  = 'Roboto, sans-serif';
+         } else{
+          document.querySelector('body').style.fontFamily  = 'Gotham, sans-serif';
+         }
+       }
+    </script>
 </body>
 </html>

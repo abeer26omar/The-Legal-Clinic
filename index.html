@@ -665,6 +665,45 @@
     crossorigin="anonymous"
     ></script>
     <script src="js/index.js" defer></script>
-
+    <script>
+      const mainbox = document.querySelector('.main-box');
+      const cardWrap = mainbox.querySelectorAll('.col-6');
+      // $(window).on('load',
+        function fnBrowserDetect(){
+                       
+          let userAgent = navigator.userAgent;
+          let browserName;
+            
+            if(userAgent.match(/safari/i)){
+              browserName = "safari";
+              document.querySelector('body').style.fontFamily  = 'Roboto, sans-serif';
+              [...cardWrap].forEach(element => {
+                element.classList.add('mac');
+              });
+            }
+            else{
+              [...cardWrap].forEach(element => {
+                element.classList.remove('mac');
+              });
+              document.querySelector('body').style.fontFamily  = 'Gotham, sans-serif';
+            }
+            
+            
+            if (window.navigator.userAgent.indexOf("Mac") != -1) {
+              // console.log("OS is Mac/iOS");
+              document.querySelector('body').style.fontFamily  = 'Roboto, sans-serif';
+              [...cardWrap].forEach(element => {
+                element.classList.add('mac');
+              });
+              // console.log('zft mac');
+            } else{
+              // console.log('fgfhdh')
+              [...cardWrap].forEach(element => {
+                element.classList.remove('mac');
+              });
+              document.querySelector('body').style.fontFamily  = 'Gotham, sans-serif';
+            } 
+         }
+    </script>
 </body>
 </html>
