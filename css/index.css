@@ -327,7 +327,9 @@
     display: flex;
     flex:1 1 auto;
 }
-
+.practice .main-box .col-6.mac .card{
+    width: 100%;
+}
 .practice .spec-box{
     background-color: var(--main-color);
     height: 250px;
