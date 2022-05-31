@@ -668,6 +668,11 @@
     <script>
       const mainbox = document.querySelector('.main-box');
       const cardWrap = mainbox.querySelectorAll('.col-6');
+      const root = document.querySelector(':root');
+      const fontFamilyMain = getComputedStyle(root).getPropertyValue('--main-font');
+      const fontFamilySafari = getComputedStyle(root).setProperty('--main-font', 'Roboto, sans-serif');
+
+
       // $(window).on('load',
         function fnBrowserDetect(){
                        
@@ -676,7 +681,7 @@
             
             if(userAgent.match(/safari/i)){
               browserName = "safari";
-              document.querySelector('body').style.fontFamily  = 'Roboto, sans-serif';
+              document.querySelector('body').style.fontFamily  = fontFamilySafari;
               [...cardWrap].forEach(element => {
                 element.classList.add('mac');
               });
@@ -685,13 +690,13 @@
               [...cardWrap].forEach(element => {
                 element.classList.remove('mac');
               });
-              document.querySelector('body').style.fontFamily  = 'Gotham, sans-serif';
+              document.querySelector('body').style.fontFamily  = fontFamilyMain;
             }
             
             
             if (window.navigator.userAgent.indexOf("Mac") != -1) {
               // console.log("OS is Mac/iOS");
-              document.querySelector('body').style.fontFamily  = 'Roboto, sans-serif';
+              document.querySelector('body').style.fontFamily  = fontFamilySafari;
               [...cardWrap].forEach(element => {
                 element.classList.add('mac');
               });
@@ -701,7 +706,7 @@
               [...cardWrap].forEach(element => {
                 element.classList.remove('mac');
               });
-              document.querySelector('body').style.fontFamily  = 'Gotham, sans-serif';
+              document.querySelector('body').style.fontFamily  = fontFamilyMain;
             } 
          }
     </script>

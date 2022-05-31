@@ -904,8 +904,14 @@
 
           const areaone = document.getElementById('program-365');
           const areatwo = document.getElementById('case-by-case');
+          
+          const pricing365 = document.querySelector('.pricing-365');
+          const cardWrap365 = pricing365.querySelectorAll('.col');
+		 
+		      const programrow = document.querySelector('.program-row');
+          const cardWrap = programrow.querySelectorAll('.col');
 
-       function fnBrowserDetect(){
+          function fnBrowserDetect(){
          let userAgent = navigator.userAgent;
          let browserName;
          if(userAgent.match(/safari/i)){
@@ -917,8 +923,20 @@
           if (window.navigator.userAgent.indexOf("Mac") != -1) {
             // console.log("OS is Mac/iOS");
             document.querySelector('body').style.fontFamily  = 'Roboto, sans-serif';
+			  [...cardWrap].forEach(element => {
+                element.classList.add('mac');
+              });
+			  [...cardWrap365].forEach(element => {
+                element.classList.add('mac');
+              });
           } else{
           document.querySelector('body').style.fontFamily  = 'Gotham, sans-serif';
+			  [...cardWrap].forEach(element => {
+                element.classList.remove('mac');
+              });
+			  [...cardWrap365].forEach(element => {
+                element.classList.remove('mac');
+              });
          }
         }
      </script>
