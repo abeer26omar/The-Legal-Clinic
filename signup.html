@@ -24,7 +24,7 @@
                     </div>
                   </div>
                   <div class="sign-up box" id="sign-up">
-                    <div class="pt-3 pb-3">
+                    <div class="pt-5 pb-3">
                       <h2>Hello, Friend!</h2>
                       <p>Enter your personal details and start a journey with us</p>
                       <button class="switch-button btn" id="slide-left-button">Sign Up</button>
@@ -59,7 +59,7 @@
                           
                           <form id="sign-in-form" class="row gx-0">     
                             <div class="col-12">
-                              <input type="email" class="form-control" placeholder="Email"/>
+                              <input type="email" class="form-control" placeholder="Email" id="forgetPassEmail"/>
                             </div> 
                            <!-- <div class="col-12">
                               <input type="password" class="form-control" placeholder="Password"/>
@@ -67,7 +67,7 @@
                             <p class="forgot-password">If you’ve forgotten your password, please enter
                               your registered email address.We’ll send you a link to reset your password.</p> 
                             <div class="12">
-                              <button class="control-button in btn" type="submit">Continue</button>
+                              <button class="control-button in btn" type="submit" id="btnforgetPass">Continue</button>
                             </div>
                             <span class="login__account">Remember your password?</span>
                               <a href="#" onclick="backtosignin()">Sign In</a>
@@ -127,6 +127,7 @@
 
       const btnSignup = document.getElementById('btnSignup');
       const btnSignin = document.getElementById('btnSignin');
+      const btnforgetPass = document.getElementById('btnforgetPass');
       const signupform = document.getElementById('sign-up-form');
 
       const inputFname = document.getElementById('inputFname');
@@ -136,6 +137,7 @@
       const inputComp = document.getElementById('inputComp');
       const inputPass = document.getElementById('inputPass');
       const inputConfPass = document.getElementById('inputConfPass');
+
       const emailSignin = document.getElementById('emailSignin');
       const passSignin = document.getElementById('passSignin');
 
@@ -143,36 +145,46 @@
       const forgetpass = document.getElementById('forgetpass');
       const signininfo = document.getElementById('sign-in-info');
 
+      const forgetPassEmail = document.getElementById('forgetPassEmail');
+      // signin swap
       signinbtn.addEventListener('click',(e)=>{
         e.preventDefault();
         formbox.classList.add('active');
         forgetpass.style.display = 'none';
         signininfo.style.display = 'flex';
       });
-
+      // signup swap
       signupbtn.addEventListener('click',(e)=>{
         e.preventDefault();
         formbox.classList.remove('active');
         forgetpass.style.display = 'none';
       });
+      // forgetpass swap
       function getforget(){
         signininfo.style.display = 'none';
         forgetpass.style.display = 'flex';
       }
+      // back to signin from forgetpass
       function backtosignin(){
         signininfo.style.display = 'flex';
         forgetpass.style.display = 'none';
       }
-
+      // signup in action
       btnSignup.addEventListener('click',(e)=>{
         e.preventDefault();
         formValidation();
       });
-
+      // signin in action
       btnSignin.addEventListener('click',(e)=>{
         e.preventDefault();
         signinValidation();
       })
+      // forget pass in action
+      btnforgetPass.addEventListener('click',(e)=>{
+        e.preventDefault();
+        forgetPassword();
+      })
+      // signup validation
       function formValidation(){
         let arrayValid = [];
         if(inputFname.value == ''){
@@ -246,6 +258,7 @@
         }
         // console.log(arrayValid);
       }
+      // signin Validation
       function signinValidation(){
         arrsigninValid = [];
         if(emailSignin.value == ''){
@@ -263,7 +276,16 @@
           arrsigninValid.push(true); 
         }
       }
-       function fnBrowserDetect(){
+      // forgetpass validation
+      function forgetPassword(){
+        if(forgetPassEmail.value == ''){
+          forgetPassEmail.style.border = "1px solid red";
+        }else{
+          forgetPassEmail.style.border = "none";
+        }
+      }
+      // browsers comptability
+      function fnBrowserDetect(){
          let userAgent = navigator.userAgent;
          let browserName;
          if(userAgent.match(/safari/i)){
