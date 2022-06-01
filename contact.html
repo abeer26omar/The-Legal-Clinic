@@ -170,7 +170,7 @@
              <div class="container">
                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4 justify-content-center">
                  <div class="col">
-                   <div class="card h-100">
+                   <div class="card">
                      <div class="add-1">
                        <h4>Downtown</h4>
                        <p>Office 123, Greek Building,<br>
@@ -180,7 +180,7 @@
                    </div>
                  </div>
                  <div class="col">
-                  <div class="card h-100">
+                  <div class="card">
                     <div class="add-2">
                       <h4>Abdeen</h4>
                       <p>171 Tahrir St.,<br>
@@ -190,7 +190,7 @@
                   </div>
                 </div>
                 <div class="col">
-                  <div class="card h-100">
+                  <div class="card">
                     <div class="add-3">
                       <h4>Cairo festival</h4>
                       <p>230 Creative Hub ,<br>
@@ -372,22 +372,33 @@
      <script src="js/isotope.js"></script>
      <script src="js/index.js"></script>
      <script>
-      function fnBrowserDetect(){
-        let userAgent = navigator.userAgent;
-        let browserName;
-        if(userAgent.match(/safari/i)){
-          browserName = "safari";
-          document.querySelector('body').style.fontFamily  = 'Roboto, sans-serif';
-         } else{
-          document.querySelector('body').style.fontFamily  = 'Gotham, sans-serif';
-         }
-         if (window.navigator.userAgent.indexOf("Mac") != -1) {
-           // console.log("OS is Mac/iOS");
+		      const address = document.querySelector('.address');
+          const cardWrap = address.querySelectorAll('.col');
+
+        function fnBrowserDetect(){
+         let userAgent = navigator.userAgent;
+         let browserName;
+         if(userAgent.match(/safari/i)){
+           browserName = "safari";
            document.querySelector('body').style.fontFamily  = 'Roboto, sans-serif';
-         } else{
+          } else{
           document.querySelector('body').style.fontFamily  = 'Gotham, sans-serif';
          }
-       }
+          if (window.navigator.userAgent.indexOf("Mac") != -1) {
+            // console.log("OS is Mac/iOS");
+            document.querySelector('body').style.fontFamily  = 'Roboto, sans-serif';
+			        [...cardWrap].forEach(element => {
+                element.classList.add('mac');
+              });
+			        
+          } else{
+          document.querySelector('body').style.fontFamily  = 'Gotham, sans-serif';
+			        [...cardWrap].forEach(element => {
+                element.classList.remove('mac');
+              });
+			       
+         }
+        }
     </script>
 </body>
 </html>
