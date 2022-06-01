@@ -113,6 +113,7 @@
       border-radius: 10px;
       border: none;
       transition: transform .2s ease-in-out; 
+      height: 100%;
       /* transition: 0.35s; */
       /* clip-path:inset(0 0); */
   }
@@ -279,6 +280,24 @@
         justify-content: center !important;
         flex-wrap: wrap;
     }
+}
+.mac{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex: 1 1 auto;
+}
+@media screen and (max-width: 768px) {
+    .program-case .program-row .col.mac .card{
+        width: 100%;
+        height: auto;
+    }
+    .pricing-365 .col.mac .card{
+        width: 100%;
+        height: auto;
+    }  
 }
 .program-case .card .get{
     position: absolute;

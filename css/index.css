@@ -338,9 +338,9 @@
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    flex:1 1 auto;
+    flex: 1 1 auto;
 }
-.practice .main-box .col-6.mac .card{
+.practice .main-box .col.mac .card{
     width: 100%;
     height: auto;
 }
