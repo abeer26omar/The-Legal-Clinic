@@ -94,23 +94,23 @@ button:focus {
 nav .nav-item{
     padding-right: 2rem;
 }
-nav .nav-item .nav-link{
+header nav li.nav-item a{
     font-weight: 300;
     font-size: 1.3rem;
     color: var(--main-color) !important;
     padding-right: 0 !important;
     padding-left: 0 !important;
 }
-nav .nav-item .nav-link:hover{
+header nav li.nav-item:hover a{
     font-weight: 500;
 }
-nav .nav-item .nav-link:hover,
-nav .nav-item .nav-link.active{
+header nav li.nav-item:hover a,
+header nav li.nav-item a.active{
   font-weight: 700;
   border-bottom: 3px solid var(--org-color);
 }
 @media screen and (max-width: 991.5px) {
-  nav .nav-item .nav-link.active{
+  header  nav li.nav-item a.active{
     font-weight: 500;
     border-bottom: 1px solid var(--org-color);
   }
@@ -178,7 +178,7 @@ nav .navbar-toggler.show span:nth-child(3) {
     padding-right: 4rem;
 } */
 @media screen and (max-width: 991.5px) {
-    nav .social-icons{
+    nav .social-icons:not(.social-icons.spec){
         padding-left: 4rem;
     }
 }
@@ -367,7 +367,7 @@ nav .navbar-toggler.show span:nth-child(3) {
   display: none ;
 }
 @media screen and (max-width: 500px) {
-  .social-icons{
+  .social-icons:not(.social-icons.spec){
     display: none !important;
   }
   #header-nav .at-spec-width{

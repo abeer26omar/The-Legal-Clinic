@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="css/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="css/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/animate.css">
-    
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
@@ -54,7 +53,7 @@
                                 </button>
                               </a>
                                 <ul style="display: none;" id="ul-menu-profile">
-                                  <li class="current"><a href="#"><i class="fa-solid fa-table-columns"></i>Dashboard</a></li>
+                                  <li class="current"><a href="dashboardStructure.html"><i class="fa-solid fa-table-columns"></i>Dashboard</a></li>
                                   <li><a href="#"><i class="fa-solid fa-gear"></i>Account setting</a></li>
                                   <li><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Sign Out</a></li>
                                 </ul>
@@ -72,7 +71,7 @@
                               <img src="images/profile.svg" alt="">
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end dropdown-menu-start" aria-labelledby="dropdownMenuLink">
-                              <li><a class="dropdown-item" href="#"><i class="fa-solid fa-table-columns"></i>Dashboard</a></li>
+                              <li><a class="dropdown-item" href="dashboardStructure.html"><i class="fa-solid fa-table-columns"></i>Dashboard</a></li>
                               <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gear"></i>Account setting</a></li>
                               <li><a class="dropdown-item" href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Sign Out</a></li>
                             </ul>
@@ -707,6 +706,21 @@
               document.querySelector('body').style.fontFamily  = 'Gotham, sans-serif';
             } 
          }
+         // menu
+        const dropMenuProfile = document.getElementById('drop-menu-profile');
+        const ulMenuProfile = document.getElementById('ul-menu-profile');
+
+        dropMenuProfile.addEventListener('click',(e)=>{
+            e.preventDefault();
+            e.stopPropagation();
+            if(ulMenuProfile.style.display == 'none'){
+                ulMenuProfile.style.display = 'block';
+                dropMenuProfile.classList.add('expanded');
+            }else{
+                ulMenuProfile.style.display = 'none';
+                dropMenuProfile.classList.remove('expanded');
+            }
+        });
     </script>
 </body>
 </html>

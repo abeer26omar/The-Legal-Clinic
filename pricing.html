@@ -938,6 +938,21 @@
               });
          }
         }
+        // menu
+        const dropMenuProfile = document.getElementById('drop-menu-profile');
+        const ulMenuProfile = document.getElementById('ul-menu-profile');
+
+        dropMenuProfile.addEventListener('click',(e)=>{
+            e.preventDefault();
+            e.stopPropagation();
+            if(ulMenuProfile.style.display == 'none'){
+                ulMenuProfile.style.display = 'block';
+                dropMenuProfile.classList.add('expanded');
+            }else{
+                ulMenuProfile.style.display = 'none';
+                dropMenuProfile.classList.remove('expanded');
+            }
+        });
      </script>
 </body>
 </html>
