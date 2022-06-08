@@ -259,7 +259,7 @@
                                         <img src="images/profile.svg" alt="profile">
                                       </a>
                                       <ul class="dropdown-menu dropdown-menu-end dropdown-menu-start" aria-labelledby="dropdownMenuLink">
-                                          <li><a class="dropdown-item" href="dashboardStructure.html"><img src="images/dashicon.svg" alt="dashicon"><span class="px-2">Dashboard</span></a></li>
+                                          <li><a class="dropdown-item" href="#"><img src="images/dashicon.svg" alt="dashicon"><span class="px-2">Dashboard</span></a></li>
                                           <li><a class="dropdown-item" href="#"><img src="images/settingicon.svg" alt="settingicon"><span class="px-2">Account setting</span></a></li>
                                           <li><a class="dropdown-item" href="#"><img src="images/logouticon.svg" alt="logouticon"><span class="px-2">Sign Out</span></a></li>
                                       </ul>
@@ -269,32 +269,60 @@
                     </div>
                 </nav>
                 <div class="content-wrap">
-                    <p>Free Contracts</p>
-                    <div class="row row-cols-1  row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4 py-5 px-3 justify-content-center">
+                    <p>Contract Name</p>
+
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-2 g-4 py-5 px-3">
                         <div class="col">
-                            <div class="card h-100">
-                                <a href="freeContracts.html">
-                                    <img src="images/contractsample.svg" alt="contractsample" width="100%">
-                                    <span>name</span>                    
-                                </a>
+                            <form class="row  g-3 align-items-center">
+                            <div class="col-12">
+                              <label class="form-label" for="inlineFormInputGroupUsername">Name</label>
+                              <div class="input-group">
+                                <input type="text" class="form-control name" id="inlineFormInputGroupUsername" placeholder="">
+                                <!-- <input type="text" class="form-control name" id="inlineFormInputGroupUsername" placeholder="" onkeyup="twoWay(event)" readonly> -->
+                              </div>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label" for="inlineFormInputGroupUsername2">Name</label>
+                                <div class="input-group">
+                                  <input type="text" class="form-control age" id="inlineFormInputGroupUsername2" placeholder="">
+                                  <!-- <input type="text" class="form-control age" id="inlineFormInputGroupUsername" placeholder="" onkeyup="twoWay(event)" readonly> -->
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <label class="form-label" for="inlineFormInputGroupUsername3">Name</label>
+                                <div class="input-group">
+                                  <input type="text" class="form-control" id="inlineFormInputGroupUsername3" placeholder="" >
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <label class="form-label" for="inlineFormInputGroupUsername4">Name</label>
+                                <div class="input-group">
+                                  <input type="text" class="form-control" id="inlineFormInputGroupUsername4" placeholder="" >
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <label class="form-label" for="inlineFormInputGroupUsername5">Name</label>
+                                <div class="input-group">
+                                  <input type="text" class="form-control" id="inlineFormInputGroupUsername5" placeholder="" >
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <label class="form-label" for="inlineFormInputGroupUsername6">Name</label>
+                                <div class="input-group">
+                                  <input type="text" class="form-control" id="inlineFormInputGroupUsername6" placeholder="" >
+                                </div>
+                              </div> 
+                            
+                          </form>
+                        </div>
+                        <div class="col align-self-center">
+                            <div class="card card-down">
+                               <button class="btn"><img src="images/btndown.svg" alt="btndown"> Download</button>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="card h-100">
-                                <a href="freeContracts.html">
-                                    <img src="images/contractsample.svg" alt="contractsample" width="100%">
-                                    <span>name</span>                    
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card h-100">
-                                <a href="freeContracts.html">
-                                    <img src="images/contractsample.svg" alt="contractsample" width="100%">
-                                    <span>name</span>                    
-                                </a>
-                            </div>
-                        </div>
+                    </div>
+                    <div class="col-12 text-center py-3">
+                        <button type="submit" class="btn btn-submit" id="btn-generate">Generate</button>
                     </div>
                 </div>
             </div>
@@ -470,8 +498,26 @@
         //         elemIframe[key].value = event.currentTarget.value;
         //     }
         // }
-       
-        
+        </script>
+        <!-- http form data send -->
+        <script>
+            const Url = '';
+            const name1 = document.getElementById('inlineFormInputGroupUsername').value;
+            $('#btn-generate').click(function(){
+                const userData = {
+                    name: name1
+                };
+                $.ajax({
+                    url: Url,
+                    data : userData,
+                    success: function(result){
+                        console.log(result);
+                    },
+                    error: function(error){
+                        console.log(`error ${error}`);
+                    }
+                })
+            });
         </script>
 </body>
 </html>

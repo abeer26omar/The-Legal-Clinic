@@ -445,7 +445,8 @@
     text-align: left;
 }
 #content .content-wrap form input:focus,
-.btn:focus
+.btn:focus,
+input:focus
 {
   box-shadow: none !important;
 }
@@ -461,11 +462,16 @@
   background: rgba(221, 221, 221, 0.33);
   align-items: center;
   justify-content: center;
+  margin-top: 2rem;
 }
 #content .content-wrap .row .card-down button{
   color: var(--main-color);
   font-weight: 700;
   font-size: 1.3rem;
+}
+input:read-only{
+  border: none;
+  /* width: 30%; */
 }
 #content .content-wrap .col-12 .btn-submit{
   background-color: var(--main-color);

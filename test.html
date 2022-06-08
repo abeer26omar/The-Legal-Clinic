@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="form-control name" id="inlineFormInputGroupUsername" placeholder="" onkeyup="twoWay(event)" readonly value="abeer">
+</body>
+<script>
+function twoWay(event){
+    var elem = document.getElementsByClassName(event.currentTarget.className);
+    for(var key in elem){
+        elem[key].value=event.currentTarget.value;
+    }
+}
+</script>
+</html>

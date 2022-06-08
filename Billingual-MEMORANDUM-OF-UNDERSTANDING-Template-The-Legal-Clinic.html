@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<!-- Created by pdf2htmlEX (https://github.com/pdf2htmlEX/pdf2htmlEX) -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<meta name="generator" content="pdf2htmlEX"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<style type="text/css">
+/*! 
+ * Base CSS for pdf2htmlEX
+ * Copyright 2012,2013 Lu Wang <coolwanglu@gmail.com> 
+ * https://github.com/pdf2htmlEX/pdf2htmlEX/blob/master/share/LICENSE
+ */#sidebar{position:absolute;top:0;left:0;bottom:0;width:250px;padding:0;margin:0;overflow:auto}#page-container{position:absolute;top:0;left:0;margin:0;padding:0;border:0}@media screen{#sidebar.opened+#page-container{left:250px}#page-container{bottom:0;right:0;overflow:auto}.loading-indicator{display:none}.loading-indicator.active{display:block;position:absolute;width:64px;height:64px;top:50%;left:50%;margin-top:-32px;margin-left:-32px}.loading-indicator img{position:absolute;top:0;left:0;bottom:0;right:0}}@media print{@page{margin:0}html{margin:0}body{margin:0;-webkit-print-color-adjust:exact}#sidebar{display:none}#page-container{width:auto;height:auto;overflow:visible;background-color:transparent}.d{display:none}}.pf{position:relative;background-color:white;overflow:hidden;margin:0;border:0}.pc{position:absolute;border:0;padding:0;margin:0;top:0;left:0;width:100%;height:100%;overflow:hidden;display:block;transform-origin:0 0;-ms-transform-origin:0 0;-webkit-transform-origin:0 0}.pc.opened{display:block}.bf{position:absolute;border:0;margin:0;top:0;bottom:0;width:100%;height:100%;-ms-user-select:none;-moz-user-select:none;-webkit-user-select:none;user-select:none}.bi{position:absolute;border:0;margin:0;-ms-user-select:none;-moz-user-select:none;-webkit-user-select:none;user-select:none}@media print{.pf{margin:0;box-shadow:none;page-break-after:always;page-break-inside:avoid}@-moz-document url-prefix(){.pf{overflow:visible;border:1px solid #fff}.pc{overflow:visible}}}.c{position:absolute;border:0;padding:0;margin:0;overflow:hidden;display:block}.t{position:absolute;white-space:pre;font-size:1px;transform-origin:0 100%;-ms-transform-origin:0 100%;-webkit-transform-origin:0 100%;unicode-bidi:bidi-override;-moz-font-feature-settings:"liga" 0}.t:after{content:''}.t:before{content:'';display:inline-block}.t span{position:relative;unicode-bidi:bidi-override}._{display:inline-block;color:transparent;z-index:-1}::selection{background:rgba(127,255,255,0.4)}::-moz-selection{background:rgba(127,255,255,0.4)}.pi{display:none}.d{position:absolute;transform-origin:0 100%;-ms-transform-origin:0 100%;-webkit-transform-origin:0 100%}.it{border:0;background-color:rgba(255,255,255,0.0)}.ir:hover{cursor:pointer}</style>
+<style type="text/css">
+/*! 
+ * Fancy styles for pdf2htmlEX
+ * Copyright 2012,2013 Lu Wang <coolwanglu@gmail.com> 
+ * https://github.com/pdf2htmlEX/pdf2htmlEX/blob/master/share/LICENSE
+ */@keyframes fadein{from{opacity:0}to{opacity:1}}@-webkit-keyframes fadein{from{opacity:0}to{opacity:1}}@keyframes swing{0{transform:rotate(0)}10%{transform:rotate(0)}90%{transform:rotate(720deg)}100%{transform:rotate(720deg)}}@-webkit-keyframes swing{0{-webkit-transform:rotate(0)}10%{-webkit-transform:rotate(0)}90%{-webkit-transform:rotate(720deg)}100%{-webkit-transform:rotate(720deg)}}@media screen{#sidebar{background-color:#2f3236;background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjNDAzYzNmIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDBMNCA0Wk00IDBMMCA0WiIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2U9IiMxZTI5MmQiPjwvcGF0aD4KPC9zdmc+")}#outline{font-family:Georgia,Times,"Times New Roman",serif;font-size:13px;margin:2em 1em}#outline ul{padding:0}#outline li{list-style-type:none;margin:1em 0}#outline li>ul{margin-left:1em}#outline a,#outline a:visited,#outline a:hover,#outline a:active{line-height:1.2;color:#e8e8e8;text-overflow:ellipsis;white-space:nowrap;text-decoration:none;display:block;overflow:hidden;outline:0}#outline a:hover{color:#0cf}#page-container{background-color:#9e9e9e;background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjOWU5ZTllIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDVMNSAwWk02IDRMNCA2Wk0tMSAxTDEgLTFaIiBzdHJva2U9IiM4ODgiIHN0cm9rZS13aWR0aD0iMSI+PC9wYXRoPgo8L3N2Zz4=");-webkit-transition:left 500ms;transition:left 500ms}.pf{margin:13px auto;box-shadow:1px 1px 3px 1px #333;border-collapse:separate}.pc.opened{-webkit-animation:fadein 100ms;animation:fadein 100ms}.loading-indicator.active{-webkit-animation:swing 1.5s ease-in-out .01s infinite alternate none;animation:swing 1.5s ease-in-out .01s infinite alternate none}.checked{background:no-repeat url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goQDSYgDiGofgAAAslJREFUOMvtlM9LFGEYx7/vvOPM6ywuuyPFihWFBUsdNnA6KLIh+QPx4KWExULdHQ/9A9EfUodYmATDYg/iRewQzklFWxcEBcGgEplDkDtI6sw4PzrIbrOuedBb9MALD7zv+3m+z4/3Bf7bZS2bzQIAcrmcMDExcTeXy10DAFVVAQDksgFUVZ1ljD3yfd+0LOuFpmnvVVW9GHhkZAQcxwkNDQ2FSCQyRMgJxnVdy7KstKZpn7nwha6urqqfTqfPBAJAuVymlNLXoigOhfd5nmeiKL5TVTV+lmIKwAOA7u5u6Lped2BsbOwjY6yf4zgQQkAIAcedaPR9H67r3uYBQFEUFItFtLe332lpaVkUBOHK3t5eRtf1DwAwODiIubk5DA8PM8bYW1EU+wEgCIJqsCAIQAiB7/u253k2BQDDMJBKpa4mEon5eDx+UxAESJL0uK2t7XosFlvSdf0QAEmlUnlRFJ9Waho2Qghc1/U9z3uWz+eX+Wr+lL6SZfleEAQIggA8z6OpqSknimIvYyybSCReMsZ6TislhCAIAti2Dc/zejVNWwCAavN8339j27YbTg0AGGM3WltbP4WhlRWq6Q/btrs1TVsYHx+vNgqKoqBUKn2NRqPFxsbGJzzP05puUlpt0ukyOI6z7zjOwNTU1OLo6CgmJyf/gA3DgKIoWF1d/cIY24/FYgOU0pp0z/Ityzo8Pj5OTk9PbwHA+vp6zWghDC+VSiuRSOQgGo32UErJ38CO42wdHR09LBQK3zKZDDY2NupmFmF4R0cHVlZWlmRZ/iVJUn9FeWWcCCE4ODjYtG27Z2Zm5juAOmgdGAB2d3cBADs7O8uSJN2SZfl+WKlpmpumaT6Yn58vn/fs6XmbhmHMNjc3tzDGFI7jYJrm5vb29sDa2trPC/9aiqJUy5pOp4f6+vqeJ5PJBAB0dnZe/t8NBajx/z37Df5OGX8d13xzAAAAAElFTkSuQmCC)}}</style>
+<style type="text/css">
+.ff0{font-family:sans-serif;visibility:hidden;}
+.m0{transform:matrix(0.250000,0.000000,0.000000,0.250000,0,0);-ms-transform:matrix(0.250000,0.000000,0.000000,0.250000,0,0);-webkit-transform:matrix(0.250000,0.000000,0.000000,0.250000,0,0);}
+.v1{vertical-align:-56.160000px;}
+.v0{vertical-align:0.000000px;}
+.ls8{letter-spacing:-0.480000px;}
+.ls7{letter-spacing:-0.378400px;}
+.ls12{letter-spacing:-0.096000px;}
+.ls6{letter-spacing:0.000000px;}
+.lsf{letter-spacing:0.096000px;}
+.lse{letter-spacing:0.120000px;}
+.ls3{letter-spacing:0.174720px;}
+.lsa{letter-spacing:0.176000px;}
+.ls11{letter-spacing:0.600000px;}
+.ls2{letter-spacing:6.443520px;}
+.lsb{letter-spacing:7.776000px;}
+.ls1{letter-spacing:8.363520px;}
+.ls0{letter-spacing:11.600000px;}
+.lsc{letter-spacing:18.336000px;}
+.ls4{letter-spacing:33.216000px;}
+.ls5{letter-spacing:36.096000px;}
+.ls13{letter-spacing:44.363520px;}
+.lsd{letter-spacing:60.096000px;}
+.ls9{letter-spacing:66.443520px;}
+.ls10{letter-spacing:101.376000px;}
+.sc_{text-shadow:none;}
+.sc0{text-shadow:-0.015em 0 transparent,0 0.015em transparent,0.015em 0 transparent,0 -0.015em  transparent;}
+@media screen and (-webkit-min-device-pixel-ratio:0){
+.sc_{-webkit-text-stroke:0px transparent;}
+.sc0{-webkit-text-stroke:0.015em transparent;text-shadow:none;}
+}
+.ws5{word-spacing:-12.096000px;}
+.ws0{word-spacing:-12.000000px;}
+.ws4{word-spacing:-11.904000px;}
+.ws1{word-spacing:-11.040000px;}
+.ws2{word-spacing:-10.661600px;}
+.ws3{word-spacing:0.000000px;}
+._d{margin-left:-7.872000px;}
+._9{margin-left:-3.097600px;}
+._5{margin-left:-2.051200px;}
+._0{margin-left:-1.008000px;}
+._2{width:1.112000px;}
+._4{width:2.418240px;}
+._3{width:3.608000px;}
+._8{width:5.280000px;}
+._6{width:6.432000px;}
+._7{width:8.832000px;}
+._1{width:10.512000px;}
+._a{width:21.312000px;}
+._b{width:27.600000px;}
+._c{width:28.744000px;}
+._f{width:108.464000px;}
+._e{width:131.984000px;}
+.fc0{color:rgb(0,0,0);}
+.fs2{font-size:37.920000px;}
+.fs1{font-size:44.160000px;}
+.fs0{font-size:48.000000px;}
+.y0{bottom:-0.500000px;}
+.y67{bottom:0.000000px;}
+.y66{bottom:2.640000px;}
+.y27{bottom:12.720000px;}
+.y4a{bottom:12.840000px;}
+.y65{bottom:25.320000px;}
+.y49{bottom:29.396000px;}
+.y26{bottom:36.476000px;}
+.y64{bottom:42.000000px;}
+.y48{bottom:46.076000px;}
+.y63{bottom:58.680000px;}
+.y25{bottom:60.116000px;}
+.y47{bottom:62.756000px;}
+.y62{bottom:75.120000px;}
+.y1{bottom:79.104000px;}
+.y46{bottom:79.436000px;}
+.y28{bottom:80.904000px;}
+.y24{bottom:83.756000px;}
+.y61{bottom:89.160000px;}
+.y45{bottom:102.956000px;}
+.y60{bottom:102.960000px;}
+.y23{bottom:107.396000px;}
+.y5f{bottom:116.760000px;}
+.y44{bottom:126.836000px;}
+.y5e{bottom:130.560000px;}
+.y22{bottom:130.916000px;}
+.y43{bottom:143.546000px;}
+.y5d{bottom:144.380000px;}
+.y21{bottom:147.866000px;}
+.y5c{bottom:158.180000px;}
+.y42{bottom:160.226000px;}
+.y20{bottom:171.266000px;}
+.y5b{bottom:171.980000px;}
+.y5a{bottom:185.780000px;}
+.y1f{bottom:195.146000px;}
+.y41{bottom:197.666000px;}
+.y59{bottom:199.580000px;}
+.y1e{bottom:208.946000px;}
+.y40{bottom:211.466000px;}
+.y58{bottom:213.380000px;}
+.y1d{bottom:222.746000px;}
+.y3f{bottom:225.266000px;}
+.y68{bottom:229.490000px;}
+.y1c{bottom:236.546000px;}
+.y57{bottom:237.020000px;}
+.y3e{bottom:239.066000px;}
+.y4b{bottom:239.570000px;}
+.y1b{bottom:250.106000px;}
+.y3d{bottom:252.866000px;}
+.y56{bottom:260.540000px;}
+.y1a{bottom:264.146000px;}
+.y3c{bottom:266.666000px;}
+.y19{bottom:277.946000px;}
+.y3b{bottom:280.466000px;}
+.y55{bottom:284.420000px;}
+.y18{bottom:291.746000px;}
+.y3a{bottom:294.266000px;}
+.y54{bottom:301.100000px;}
+.y17{bottom:307.246000px;}
+.y53{bottom:317.810000px;}
+.y16{bottom:319.966000px;}
+.y39{bottom:321.886000px;}
+.y15{bottom:334.486000px;}
+.y38{bottom:335.686000px;}
+.y52{bottom:341.210000px;}
+.y14{bottom:349.006000px;}
+.y37{bottom:349.486000px;}
+.y36{bottom:363.286000px;}
+.y13{bottom:363.526000px;}
+.y51{bottom:365.090000px;}
+.y12{bottom:376.006000px;}
+.y35{bottom:377.086000px;}
+.y50{bottom:381.770000px;}
+.y11{bottom:388.846000px;}
+.y10{bottom:401.566000px;}
+.y4f{bottom:405.170000px;}
+.yf{bottom:413.926000px;}
+.y34{bottom:414.526000px;}
+.y33{bottom:428.326000px;}
+.ye{bottom:428.686000px;}
+.y4e{bottom:429.170000px;}
+.y32{bottom:442.126000px;}
+.yd{bottom:443.206000px;}
+.y4d{bottom:445.850000px;}
+.yc{bottom:457.846000px;}
+.y4c{bottom:469.250000px;}
+.yb{bottom:472.396000px;}
+.y31{bottom:479.596000px;}
+.ya{bottom:486.916000px;}
+.y30{bottom:493.396000px;}
+.y9{bottom:501.196000px;}
+.y2f{bottom:507.196000px;}
+.y8{bottom:516.076000px;}
+.y2e{bottom:520.996000px;}
+.y7{bottom:530.596000px;}
+.y2d{bottom:534.796000px;}
+.y6{bottom:542.956000px;}
+.y5{bottom:565.876000px;}
+.y2c{bottom:572.356000px;}
+.y4{bottom:582.556000px;}
+.y2b{bottom:586.156000px;}
+.y2a{bottom:599.956000px;}
+.y3{bottom:606.316000px;}
+.y29{bottom:628.156000px;}
+.y2{bottom:629.716000px;}
+.h8{height:33.515625px;}
+.h6{height:45.906562px;}
+.h5{height:46.618125px;}
+.h4{height:49.898438px;}
+.h3{height:50.671875px;}
+.h9{height:480.430000px;}
+.h7{height:639.100000px;}
+.h2{height:640.900000px;}
+.h0{height:792.000000px;}
+.h1{height:792.500000px;}
+.w2{width:522.100000px;}
+.w3{width:611.999991px;}
+.w0{width:612.000000px;}
+.w1{width:612.500000px;}
+.x0{left:0.000000px;}
+.x3{left:5.400000px;}
+.x5{left:18.384000px;}
+.x4{left:22.944000px;}
+.x6{left:33.744000px;}
+.x1{left:45.000000px;}
+.x8{left:51.744000px;}
+.x7{left:54.384000px;}
+.x9{left:90.023991px;}
+.x2{left:149.330000px;}
+@media print{
+.v1{vertical-align:-74.880000pt;}
+.v0{vertical-align:0.000000pt;}
+.ls8{letter-spacing:-0.640000pt;}
+.ls7{letter-spacing:-0.504533pt;}
+.ls12{letter-spacing:-0.128000pt;}
+.ls6{letter-spacing:0.000000pt;}
+.lsf{letter-spacing:0.128000pt;}
+.lse{letter-spacing:0.160000pt;}
+.ls3{letter-spacing:0.232960pt;}
+.lsa{letter-spacing:0.234667pt;}
+.ls11{letter-spacing:0.800000pt;}
+.ls2{letter-spacing:8.591360pt;}
+.lsb{letter-spacing:10.368000pt;}
+.ls1{letter-spacing:11.151360pt;}
+.ls0{letter-spacing:15.466667pt;}
+.lsc{letter-spacing:24.448000pt;}
+.ls4{letter-spacing:44.288000pt;}
+.ls5{letter-spacing:48.128000pt;}
+.ls13{letter-spacing:59.151360pt;}
+.lsd{letter-spacing:80.128000pt;}
+.ls9{letter-spacing:88.591360pt;}
+.ls10{letter-spacing:135.168000pt;}
+.ws5{word-spacing:-16.128000pt;}
+.ws0{word-spacing:-16.000000pt;}
+.ws4{word-spacing:-15.872000pt;}
+.ws1{word-spacing:-14.720000pt;}
+.ws2{word-spacing:-14.215467pt;}
+.ws3{word-spacing:0.000000pt;}
+._d{margin-left:-10.496000pt;}
+._9{margin-left:-4.130133pt;}
+._5{margin-left:-2.734933pt;}
+._0{margin-left:-1.344000pt;}
+._2{width:1.482667pt;}
+._4{width:3.224320pt;}
+._3{width:4.810667pt;}
+._8{width:7.040000pt;}
+._6{width:8.576000pt;}
+._7{width:11.776000pt;}
+._1{width:14.016000pt;}
+._a{width:28.416000pt;}
+._b{width:36.800000pt;}
+._c{width:38.325333pt;}
+._f{width:144.618667pt;}
+._e{width:175.978667pt;}
+.fs2{font-size:50.560000pt;}
+.fs1{font-size:58.880000pt;}
+.fs0{font-size:64.000000pt;}
+.y0{bottom:-0.666667pt;}
+.y67{bottom:0.000000pt;}
+.y66{bottom:3.520000pt;}
+.y27{bottom:16.960000pt;}
+.y4a{bottom:17.120000pt;}
+.y65{bottom:33.760000pt;}
+.y49{bottom:39.194667pt;}
+.y26{bottom:48.634667pt;}
+.y64{bottom:56.000000pt;}
+.y48{bottom:61.434667pt;}
+.y63{bottom:78.240000pt;}
+.y25{bottom:80.154667pt;}
+.y47{bottom:83.674667pt;}
+.y62{bottom:100.160000pt;}
+.y1{bottom:105.472000pt;}
+.y46{bottom:105.914667pt;}
+.y28{bottom:107.872000pt;}
+.y24{bottom:111.674667pt;}
+.y61{bottom:118.880000pt;}
+.y45{bottom:137.274667pt;}
+.y60{bottom:137.280000pt;}
+.y23{bottom:143.194667pt;}
+.y5f{bottom:155.680000pt;}
+.y44{bottom:169.114667pt;}
+.y5e{bottom:174.080000pt;}
+.y22{bottom:174.554667pt;}
+.y43{bottom:191.394667pt;}
+.y5d{bottom:192.506667pt;}
+.y21{bottom:197.154667pt;}
+.y5c{bottom:210.906667pt;}
+.y42{bottom:213.634667pt;}
+.y20{bottom:228.354667pt;}
+.y5b{bottom:229.306667pt;}
+.y5a{bottom:247.706667pt;}
+.y1f{bottom:260.194667pt;}
+.y41{bottom:263.554667pt;}
+.y59{bottom:266.106667pt;}
+.y1e{bottom:278.594667pt;}
+.y40{bottom:281.954667pt;}
+.y58{bottom:284.506667pt;}
+.y1d{bottom:296.994667pt;}
+.y3f{bottom:300.354667pt;}
+.y68{bottom:305.986667pt;}
+.y1c{bottom:315.394667pt;}
+.y57{bottom:316.026667pt;}
+.y3e{bottom:318.754667pt;}
+.y4b{bottom:319.426667pt;}
+.y1b{bottom:333.474667pt;}
+.y3d{bottom:337.154667pt;}
+.y56{bottom:347.386667pt;}
+.y1a{bottom:352.194667pt;}
+.y3c{bottom:355.554667pt;}
+.y19{bottom:370.594667pt;}
+.y3b{bottom:373.954667pt;}
+.y55{bottom:379.226667pt;}
+.y18{bottom:388.994667pt;}
+.y3a{bottom:392.354667pt;}
+.y54{bottom:401.466667pt;}
+.y17{bottom:409.661333pt;}
+.y53{bottom:423.746667pt;}
+.y16{bottom:426.621333pt;}
+.y39{bottom:429.181333pt;}
+.y15{bottom:445.981333pt;}
+.y38{bottom:447.581333pt;}
+.y52{bottom:454.946667pt;}
+.y14{bottom:465.341333pt;}
+.y37{bottom:465.981333pt;}
+.y36{bottom:484.381333pt;}
+.y13{bottom:484.701333pt;}
+.y51{bottom:486.786667pt;}
+.y12{bottom:501.341333pt;}
+.y35{bottom:502.781333pt;}
+.y50{bottom:509.026667pt;}
+.y11{bottom:518.461333pt;}
+.y10{bottom:535.421333pt;}
+.y4f{bottom:540.226667pt;}
+.yf{bottom:551.901333pt;}
+.y34{bottom:552.701333pt;}
+.y33{bottom:571.101333pt;}
+.ye{bottom:571.581333pt;}
+.y4e{bottom:572.226667pt;}
+.y32{bottom:589.501333pt;}
+.yd{bottom:590.941333pt;}
+.y4d{bottom:594.466667pt;}
+.yc{bottom:610.461333pt;}
+.y4c{bottom:625.666667pt;}
+.yb{bottom:629.861333pt;}
+.y31{bottom:639.461333pt;}
+.ya{bottom:649.221333pt;}
+.y30{bottom:657.861333pt;}
+.y9{bottom:668.261333pt;}
+.y2f{bottom:676.261333pt;}
+.y8{bottom:688.101333pt;}
+.y2e{bottom:694.661333pt;}
+.y7{bottom:707.461333pt;}
+.y2d{bottom:713.061333pt;}
+.y6{bottom:723.941333pt;}
+.y5{bottom:754.501333pt;}
+.y2c{bottom:763.141333pt;}
+.y4{bottom:776.741333pt;}
+.y2b{bottom:781.541333pt;}
+.y2a{bottom:799.941333pt;}
+.y3{bottom:808.421333pt;}
+.y29{bottom:837.541333pt;}
+.y2{bottom:839.621333pt;}
+.h8{height:44.687500pt;}
+.h6{height:61.208750pt;}
+.h5{height:62.157500pt;}
+.h4{height:66.531250pt;}
+.h3{height:67.562500pt;}
+.h9{height:640.573333pt;}
+.h7{height:852.133333pt;}
+.h2{height:854.533333pt;}
+.h0{height:1056.000000pt;}
+.h1{height:1056.666667pt;}
+.w2{width:696.133333pt;}
+.w3{width:815.999988pt;}
+.w0{width:816.000000pt;}
+.w1{width:816.666667pt;}
+.x0{left:0.000000pt;}
+.x3{left:7.200000pt;}
+.x5{left:24.512000pt;}
+.x4{left:30.592000pt;}
+.x6{left:44.992000pt;}
+.x1{left:60.000000pt;}
+.x8{left:68.992000pt;}
+.x7{left:72.512000pt;}
+.x9{left:120.031988pt;}
+.x2{left:199.106667pt;}
+}
+</style>
+<script>
+/*
+ Copyright 2012 Mozilla Foundation 
+ Copyright 2013 Lu Wang <coolwanglu@gmail.com>
+ Apachine License Version 2.0 
+*/
+(function(){function b(a,b,e,f){var c=(a.className||"").split(/\s+/g);""===c[0]&&c.shift();var d=c.indexOf(b);0>d&&e&&c.push(b);0<=d&&f&&c.splice(d,1);a.className=c.join(" ");return 0<=d}if(!("classList"in document.createElement("div"))){var e={add:function(a){b(this.element,a,!0,!1)},contains:function(a){return b(this.element,a,!1,!1)},remove:function(a){b(this.element,a,!1,!0)},toggle:function(a){b(this.element,a,!0,!0)}};Object.defineProperty(HTMLElement.prototype,"classList",{get:function(){if(this._classList)return this._classList;
+var a=Object.create(e,{element:{value:this,writable:!1,enumerable:!0}});Object.defineProperty(this,"_classList",{value:a,writable:!1,enumerable:!1});return a},enumerable:!0})}})();
+</script>
+<script>
+(function(){/*
+ pdf2htmlEX.js: Core UI functions for pdf2htmlEX 
+ Copyright 2012,2013 Lu Wang <coolwanglu@gmail.com> and other contributors 
+ https://github.com/pdf2htmlEX/pdf2htmlEX/blob/master/share/LICENSE 
+*/
+var pdf2htmlEX=window.pdf2htmlEX=window.pdf2htmlEX||{},CSS_CLASS_NAMES={page_frame:"pf",page_content_box:"pc",page_data:"pi",background_image:"bi",link:"l",input_radio:"ir",__dummy__:"no comma"},DEFAULT_CONFIG={container_id:"page-container",sidebar_id:"sidebar",outline_id:"outline",loading_indicator_cls:"loading-indicator",preload_pages:3,render_timeout:100,scale_step:0.9,key_handler:!0,hashchange_handler:!0,view_history_handler:!0,__dummy__:"no comma"},EPS=1E-6;
+function invert(a){var b=a[0]*a[3]-a[1]*a[2];return[a[3]/b,-a[1]/b,-a[2]/b,a[0]/b,(a[2]*a[5]-a[3]*a[4])/b,(a[1]*a[4]-a[0]*a[5])/b]}function transform(a,b){return[a[0]*b[0]+a[2]*b[1]+a[4],a[1]*b[0]+a[3]*b[1]+a[5]]}function get_page_number(a){return parseInt(a.getAttribute("data-page-no"),16)}function disable_dragstart(a){for(var b=0,c=a.length;b<c;++b)a[b].addEventListener("dragstart",function(){return!1},!1)}
+function clone_and_extend_objs(a){for(var b={},c=0,e=arguments.length;c<e;++c){var h=arguments[c],d;for(d in h)h.hasOwnProperty(d)&&(b[d]=h[d])}return b}
+function Page(a){if(a){this.shown=this.loaded=!1;this.page=a;this.num=get_page_number(a);this.original_height=a.clientHeight;this.original_width=a.clientWidth;var b=a.getElementsByClassName(CSS_CLASS_NAMES.page_content_box)[0];b&&(this.content_box=b,this.original_scale=this.cur_scale=this.original_height/b.clientHeight,this.page_data=JSON.parse(a.getElementsByClassName(CSS_CLASS_NAMES.page_data)[0].getAttribute("data-data")),this.ctm=this.page_data.ctm,this.ictm=invert(this.ctm),this.loaded=!0)}}
+Page.prototype={hide:function(){this.loaded&&this.shown&&(this.content_box.classList.remove("opened"),this.shown=!1)},show:function(){this.loaded&&!this.shown&&(this.content_box.classList.add("opened"),this.shown=!0)},rescale:function(a){this.cur_scale=0===a?this.original_scale:a;this.loaded&&(a=this.content_box.style,a.msTransform=a.webkitTransform=a.transform="scale("+this.cur_scale.toFixed(3)+")");a=this.page.style;a.height=this.original_height*this.cur_scale+"px";a.width=this.original_width*this.cur_scale+
+"px"},view_position:function(){var a=this.page,b=a.parentNode;return[b.scrollLeft-a.offsetLeft-a.clientLeft,b.scrollTop-a.offsetTop-a.clientTop]},height:function(){return this.page.clientHeight},width:function(){return this.page.clientWidth}};function Viewer(a){this.config=clone_and_extend_objs(DEFAULT_CONFIG,0<arguments.length?a:{});this.pages_loading=[];this.init_before_loading_content();var b=this;document.addEventListener("DOMContentLoaded",function(){b.init_after_loading_content()},!1)}
+Viewer.prototype={scale:1,cur_page_idx:0,first_page_idx:0,init_before_loading_content:function(){this.pre_hide_pages()},initialize_radio_button:function(){for(var a=document.getElementsByClassName(CSS_CLASS_NAMES.input_radio),b=0;b<a.length;b++)a[b].addEventListener("click",function(){this.classList.toggle("checked")})},init_after_loading_content:function(){this.sidebar=document.getElementById(this.config.sidebar_id);this.outline=document.getElementById(this.config.outline_id);this.container=document.getElementById(this.config.container_id);
+this.loading_indicator=document.getElementsByClassName(this.config.loading_indicator_cls)[0];for(var a=!0,b=this.outline.childNodes,c=0,e=b.length;c<e;++c)if("ul"===b[c].nodeName.toLowerCase()){a=!1;break}a||this.sidebar.classList.add("opened");this.find_pages();if(0!=this.pages.length){disable_dragstart(document.getElementsByClassName(CSS_CLASS_NAMES.background_image));this.config.key_handler&&this.register_key_handler();var h=this;this.config.hashchange_handler&&window.addEventListener("hashchange",
+function(a){h.navigate_to_dest(document.location.hash.substring(1))},!1);this.config.view_history_handler&&window.addEventListener("popstate",function(a){a.state&&h.navigate_to_dest(a.state)},!1);this.container.addEventListener("scroll",function(){h.update_page_idx();h.schedule_render(!0)},!1);[this.container,this.outline].forEach(function(a){a.addEventListener("click",h.link_handler.bind(h),!1)});this.initialize_radio_button();this.render()}},find_pages:function(){for(var a=[],b={},c=this.container.childNodes,
+e=0,h=c.length;e<h;++e){var d=c[e];d.nodeType===Node.ELEMENT_NODE&&d.classList.contains(CSS_CLASS_NAMES.page_frame)&&(d=new Page(d),a.push(d),b[d.num]=a.length-1)}this.pages=a;this.page_map=b},load_page:function(a,b,c){var e=this.pages;if(!(a>=e.length||(e=e[a],e.loaded||this.pages_loading[a]))){var e=e.page,h=e.getAttribute("data-page-url");if(h){this.pages_loading[a]=!0;var d=e.getElementsByClassName(this.config.loading_indicator_cls)[0];"undefined"===typeof d&&(d=this.loading_indicator.cloneNode(!0),
+d.classList.add("active"),e.appendChild(d));var f=this,g=new XMLHttpRequest;g.open("GET",h,!0);g.onload=function(){if(200===g.status||0===g.status){var b=document.createElement("div");b.innerHTML=g.responseText;for(var d=null,b=b.childNodes,e=0,h=b.length;e<h;++e){var p=b[e];if(p.nodeType===Node.ELEMENT_NODE&&p.classList.contains(CSS_CLASS_NAMES.page_frame)){d=p;break}}b=f.pages[a];f.container.replaceChild(d,b.page);b=new Page(d);f.pages[a]=b;b.hide();b.rescale(f.scale);disable_dragstart(d.getElementsByClassName(CSS_CLASS_NAMES.background_image));
+f.schedule_render(!1);c&&c(b)}delete f.pages_loading[a]};g.send(null)}void 0===b&&(b=this.config.preload_pages);0<--b&&(f=this,setTimeout(function(){f.load_page(a+1,b)},0))}},pre_hide_pages:function(){var a="@media screen{."+CSS_CLASS_NAMES.page_content_box+"{display:none;}}",b=document.createElement("style");b.styleSheet?b.styleSheet.cssText=a:b.appendChild(document.createTextNode(a));document.head.appendChild(b)},render:function(){for(var a=this.container,b=a.scrollTop,c=a.clientHeight,a=b-c,b=
+b+c+c,c=this.pages,e=0,h=c.length;e<h;++e){var d=c[e],f=d.page,g=f.offsetTop+f.clientTop,f=g+f.clientHeight;g<=b&&f>=a?d.loaded?d.show():this.load_page(e):d.hide()}},update_page_idx:function(){var a=this.pages,b=a.length;if(!(2>b)){for(var c=this.container,e=c.scrollTop,c=e+c.clientHeight,h=-1,d=b,f=d-h;1<f;){var g=h+Math.floor(f/2),f=a[g].page;f.offsetTop+f.clientTop+f.clientHeight>=e?d=g:h=g;f=d-h}this.first_page_idx=d;for(var g=h=this.cur_page_idx,k=0;d<b;++d){var f=a[d].page,l=f.offsetTop+f.clientTop,
+f=f.clientHeight;if(l>c)break;f=(Math.min(c,l+f)-Math.max(e,l))/f;if(d===h&&Math.abs(f-1)<=EPS){g=h;break}f>k&&(k=f,g=d)}this.cur_page_idx=g}},schedule_render:function(a){if(void 0!==this.render_timer){if(!a)return;clearTimeout(this.render_timer)}var b=this;this.render_timer=setTimeout(function(){delete b.render_timer;b.render()},this.config.render_timeout)},register_key_handler:function(){var a=this;window.addEventListener("DOMMouseScroll",function(b){if(b.ctrlKey){b.preventDefault();var c=a.container,
+e=c.getBoundingClientRect(),c=[b.clientX-e.left-c.clientLeft,b.clientY-e.top-c.clientTop];a.rescale(Math.pow(a.config.scale_step,b.detail),!0,c)}},!1);window.addEventListener("keydown",function(b){var c=!1,e=b.ctrlKey||b.metaKey,h=b.altKey;switch(b.keyCode){case 61:case 107:case 187:e&&(a.rescale(1/a.config.scale_step,!0),c=!0);break;case 173:case 109:case 189:e&&(a.rescale(a.config.scale_step,!0),c=!0);break;case 48:e&&(a.rescale(0,!1),c=!0);break;case 33:h?a.scroll_to(a.cur_page_idx-1):a.container.scrollTop-=
+a.container.clientHeight;c=!0;break;case 34:h?a.scroll_to(a.cur_page_idx+1):a.container.scrollTop+=a.container.clientHeight;c=!0;break;case 35:a.container.scrollTop=a.container.scrollHeight;c=!0;break;case 36:a.container.scrollTop=0,c=!0}c&&b.preventDefault()},!1)},rescale:function(a,b,c){var e=this.scale;this.scale=a=0===a?1:b?e*a:a;c||(c=[0,0]);b=this.container;c[0]+=b.scrollLeft;c[1]+=b.scrollTop;for(var h=this.pages,d=h.length,f=this.first_page_idx;f<d;++f){var g=h[f].page;if(g.offsetTop+g.clientTop>=
+c[1])break}g=f-1;0>g&&(g=0);var g=h[g].page,k=g.clientWidth,f=g.clientHeight,l=g.offsetLeft+g.clientLeft,m=c[0]-l;0>m?m=0:m>k&&(m=k);k=g.offsetTop+g.clientTop;c=c[1]-k;0>c?c=0:c>f&&(c=f);for(f=0;f<d;++f)h[f].rescale(a);b.scrollLeft+=m/e*a+g.offsetLeft+g.clientLeft-m-l;b.scrollTop+=c/e*a+g.offsetTop+g.clientTop-c-k;this.schedule_render(!0)},fit_width:function(){var a=this.cur_page_idx;this.rescale(this.container.clientWidth/this.pages[a].width(),!0);this.scroll_to(a)},fit_height:function(){var a=this.cur_page_idx;
+this.rescale(this.container.clientHeight/this.pages[a].height(),!0);this.scroll_to(a)},get_containing_page:function(a){for(;a;){if(a.nodeType===Node.ELEMENT_NODE&&a.classList.contains(CSS_CLASS_NAMES.page_frame)){a=get_page_number(a);var b=this.page_map;return a in b?this.pages[b[a]]:null}a=a.parentNode}return null},link_handler:function(a){var b=a.target,c=b.getAttribute("data-dest-detail");if(c){if(this.config.view_history_handler)try{var e=this.get_current_view_hash();window.history.replaceState(e,
+"","#"+e);window.history.pushState(c,"","#"+c)}catch(h){}this.navigate_to_dest(c,this.get_containing_page(b));a.preventDefault()}},navigate_to_dest:function(a,b){try{var c=JSON.parse(a)}catch(e){return}if(c instanceof Array){var h=c[0],d=this.page_map;if(h in d){for(var f=d[h],h=this.pages[f],d=2,g=c.length;d<g;++d){var k=c[d];if(null!==k&&"number"!==typeof k)return}for(;6>c.length;)c.push(null);var g=b||this.pages[this.cur_page_idx],d=g.view_position(),d=transform(g.ictm,[d[0],g.height()-d[1]]),
+g=this.scale,l=[0,0],m=!0,k=!1,n=this.scale;switch(c[1]){case "XYZ":l=[null===c[2]?d[0]:c[2]*n,null===c[3]?d[1]:c[3]*n];g=c[4];if(null===g||0===g)g=this.scale;k=!0;break;case "Fit":case "FitB":l=[0,0];k=!0;break;case "FitH":case "FitBH":l=[0,null===c[2]?d[1]:c[2]*n];k=!0;break;case "FitV":case "FitBV":l=[null===c[2]?d[0]:c[2]*n,0];k=!0;break;case "FitR":l=[c[2]*n,c[5]*n],m=!1,k=!0}if(k){this.rescale(g,!1);var p=this,c=function(a){l=transform(a.ctm,l);m&&(l[1]=a.height()-l[1]);p.scroll_to(f,l)};h.loaded?
+c(h):(this.load_page(f,void 0,c),this.scroll_to(f))}}}},scroll_to:function(a,b){var c=this.pages;if(!(0>a||a>=c.length)){c=c[a].view_position();void 0===b&&(b=[0,0]);var e=this.container;e.scrollLeft+=b[0]-c[0];e.scrollTop+=b[1]-c[1]}},get_current_view_hash:function(){var a=[],b=this.pages[this.cur_page_idx];a.push(b.num);a.push("XYZ");var c=b.view_position(),c=transform(b.ictm,[c[0],b.height()-c[1]]);a.push(c[0]/this.scale);a.push(c[1]/this.scale);a.push(this.scale);return JSON.stringify(a)}};
+pdf2htmlEX.Viewer=Viewer;})();
+</script>
+<script>
+try{
+pdf2htmlEX.defaultViewer = new pdf2htmlEX.Viewer({});
+}catch(e){}
+</script>
+<title></title>
+</head>
+<body>
+<div id="sidebar">
+<div id="outline">
+</div>
+</div>
+<div id="page-container">
+<div id="pf1" class="pf w0 h0" data-page-no="1"><div class="pc pc1 w0 h0"><img class="bi x0 y0 w1 h1" alt="" src=""><div class="c x1 y1 w2 h2"><div class="t m0 x2 h3 y2 ff1 fs0 fc0 sc0 ls6 ws3">MEMORANDUM OF UNDERSTANDING </div><div class="t m0 x3 h4 y3 ff2 fs0 fc0 sc0 ls6 ws3"> </div><div class="t m0 x3 h3 y4 ff1 fs0 fc0 sc0 ls6 ws3">THIS <span class="_"> </span>MEMORANDUM<span class="_ _0"></span> <span class="_"> </span>OF <span class="_ _1"> </span>UNDERSTANDING<span class="ff2 ls0"> </span><span class="ff3 ws0">(<span class="_ _2"></span>“M<span class="ff2">o</span><span class="ws3">U”) <span class="_"> </span>is <span class="_ _1"> </span>entered <span class="_"> </span>into <span class="_"> </span>effec<span class="_ _0"></span>tive <span class="_"> </span><span class="ff1" id="firstName">What <span class="_"> </span>is <span class="_"> </span>the<span class="_ _0"></span> </span></span></span></div><div class="t m0 x3 h3 y5 ff1 fs0 fc0 sc0 ls6 ws3">Effective Date of this MoU<span class="ff2">? <span class="ff3">(the “EFFECTIVE DATE”) by and between:</span> </span></div><div class="t m0 x3 h5 y6 ff1 fs1 fc0 sc0 ls6 ws1">(1)<span class="ff4 ls1 ws3"> </span><span class="ws3">Is the first par<span class="_ _0"></span>ty an entity or an ind<span class="_ _0"></span>ividual? </span></div><div class="t m0 x4 h5 y7 ff1 fs1 fc0 sc0 ls6 ws3"> (<span class="ls7 ws2">If</span> <span class="_ _3"></span>the <span class="_ _2"></span>f<span class="_ _2"></span>irst <span class="_ _3"></span>par<span class="_ _0"></span>ty <span class="_ _2"></span>i<span class="_ _2"></span>s <span class="_ _3"></span>an<span class="_ _0"></span> <span class="_ _3"></span>e<span class="_ _0"></span>ntity) <span class="_ _2"></span>What <span class="_ _3"></span>is <span class="_ _4"></span>the <span class="_ _4"></span>name <span class="_ _4"></span>of <span class="_ _4"></span>the <span class="_ _3"></span>entity?<span class="ff2"> <span class="_ _4"></span>a <span class="_ _4"></span>registered <span class="_ _4"></span>at <span class="_ _4"></span>the <span class="_ _4"></span>comm<span class="_ _0"></span>ercial <span class="_ _4"></span>register <span class="_ _4"></span>No. </span></div><div class="t m0 x4 h5 y8 ff1 fs1 fc0 sc0 ls6 ws3">What <span class="_ _2"></span>is <span class="_ _2"></span>the <span class="_ _2"></span>commercial <span class="_ _2"></span>register <span class="_ _2"></span>number<span class="ls8">? <span class="_ _4"></span></span><span class="ff2">having <span class="_ _2"></span>its <span class="_ _4"></span>registered office <span class="_ _2"></span>at <span class="_ _4"></span></span>In <span class="_ _2"></span>which <span class="_ _2"></span>registered <span class="_ _2"></span>office w<span class="_ _2"></span>as <span class="_ _2"></span>the </div><div class="t m0 x4 h5 y9 ff1 fs1 fc0 sc0 ls6 ws3">entity registered?<span class="_ _0"></span><span class="ff2"> </span></div><div class="t m0 x4 h5 ya ff2 fs1 fc0 sc0 ls6 ws3">Represented here by<span class="_ _0"></span> <span class="ff1">Who repres<span class="_ _0"></span>ents the entity <span class="_ _0"></span>as the manag<span class="_ _0"></span>er? <span class="ff2">as the m<span class="_ _0"></span>anager. </span></span></div><div class="t m0 x4 h5 yb ff1 fs1 fc0 sc0 ls6 ws3">(If the f<span class="_ _2"></span>irst party is <span class="_ _2"></span>an i<span class="_ _2"></span>ndividual)<span class="_ _0"></span> What i<span class="_ _2"></span>s the <span class="_ _2"></span>name of the <span class="_ _2"></span>individual?<span class="ff2"> <span class="_ _2"></span>residing at <span class="_ _2"></span></span>Where is <span class="_ _2"></span>the individual </div><div class="t m0 x4 h5 yc ff1 fs1 fc0 sc0 ls6 ws1">residing?<span class="ff2 ws3"> holding <span class="_ _2"></span>ID <span class="_ _2"></span>number <span class="_ _2"></span><span class="ff1">What <span class="_ _2"></span>is <span class="_ _2"></span>the <span class="_ _2"></span>ID <span class="_ _2"></span>number <span class="_ _2"></span>of <span class="_ _2"></span>the i<span class="_ _2"></span>ndividual?</span> <span class="_ _2"></span>Hereinafter referred <span class="_ _2"></span>to <span class="_ _2"></span>as <span class="_ _2"></span>the <span class="_ _2"></span><span class="ff5">“First </span></span></div><div class="t m0 x4 h6 yd ff5 fs1 fc0 sc0 ls6 ws1">Party”;<span class="ff2 ws3"> and <span class="_ _0"></span> </span></div><div class="t m0 x4 h6 ye ff2 fs1 fc0 sc0 ls6 ws3"> </div><div class="t m0 x3 h5 yf ff1 fs1 fc0 sc0 ls6 ws1">(2)<span class="ff4 ls2 ws3"> </span><span class="ws3">Is the second par<span class="_ _0"></span>ty an entity o<span class="_ _0"></span>r an individua<span class="_ _0"></span>l </span></div><div class="t m0 x4 h5 y10 ff1 fs1 fc0 sc0 ls3">(<span class="ls7 ws2">If<span class="_ _2"></span></span><span class="ls6 ws3"> the se<span class="_ _2"></span>cond party is <span class="_ _2"></span>an ent<span class="_ _2"></span>ity) What is <span class="_ _2"></span>the <span class="_ _2"></span>name of <span class="_ _2"></span>the <span class="_ _2"></span>entity?<span class="ff2"> <span class="_ _2"></span>a registered at <span class="_ _2"></span>the <span class="_ _2"></span>comm<span class="_ _0"></span>ercial register No. </span></span></div><div class="t m0 x4 h5 y11 ff1 fs1 fc0 sc0 ls6 ws3">What <span class="_ _2"></span>is <span class="_ _2"></span>the <span class="_ _2"></span>commercial <span class="_ _2"></span>register <span class="_ _4"></span>number?<span class="ff2"> <span class="_ _2"></span>having its <span class="_ _4"></span>registered <span class="_ _2"></span>office at <span class="_ _4"></span></span>In <span class="_ _2"></span>which <span class="_ _2"></span>registered <span class="_ _2"></span>office <span class="_ _2"></span>was <span class="_ _2"></span>the </div><div class="t m0 x4 h5 y12 ff1 fs1 fc0 sc0 ls6 ws3">entity registered?<span class="_ _0"></span> </div><div class="t m0 x4 h5 y13 ff2 fs1 fc0 sc0 ls6 ws3">Represented here by<span class="_ _0"></span> <span class="ff1">Who repres<span class="_ _0"></span>ents the entity <span class="_ _0"></span>as the ex<span class="_ _0"></span>ecutive manager? <span class="ff2">as <span class="_ _0"></span>the Executive m<span class="_ _0"></span>anager. </span></span></div><div class="t m0 x5 h5 y14 ff1 fs1 fc0 sc0 ls3">(<span class="ls7 ws2">If<span class="_ _2"></span></span><span class="ls6 ws3"> <span class="_ _0"></span>the <span class="_ _0"></span>second <span class="_ _0"></span>par<span class="_ _0"></span>ty is <span class="_ _0"></span>an <span class="_ _5"></span>individual) <span class="_ _5"></span>What is <span class="_ _5"></span>the name <span class="_ _5"></span>of the <span class="_ _5"></span>individual?<span class="ff2"> <span class="_ _5"></span>residing at <span class="_ _5"></span><span class="ff1">Where is <span class="_ _5"></span>the ind<span class="_ _0"></span>ividual </span></span></span></div><div class="t m0 x5 h4 y15 ff1 fs1 fc0 sc0 ls6 ws1">residing?<span class="ff2 ws3"> holding<span class="_ _5"></span> ID number <span class="ff1">What is the ID nu<span class="_ _5"></span>m<span class="_ _2"></span>ber of the ind<span class="_ _5"></span>i<span class="_ _2"></span>vidual?<span class="ff2"> <span class="fs0"> </span></span></span></span></div><div class="t m0 x4 h6 y16 ff2 fs1 fc0 sc0 ls6 ws3">Hereinafter refe<span class="_ _0"></span>rred to as th<span class="_ _5"></span>e <span class="_ _2"></span><span class="ff5">“Second Party”.<span class="_ _0"></span><span class="ff2"> </span></span></div><div class="t m0 x3 h6 y17 ff2 fs1 fc0 sc0 ls6 ws3"> </div><div class="t m0 x3 h4 y18 ff2 fs0 fc0 sc0 ls6 ws3">The <span class="_ _6"></span>First <span class="_ _6"></span>Party <span class="_ _6"></span>and <span class="_ _6"></span>The <span class="_ _6"></span>S<span class="_ _2"></span>econd <span class="_ _6"></span>Party <span class="_ _6"></span><span class="ff3">are <span class="_ _6"> </span>individuall<span class="_ _2"></span>y <span class="_ _6"> </span>referred <span class="_ _6"> </span>to <span class="_ _6"> </span>as <span class="_ _6"> </span>a <span class="_ _6"> </span>“Party” <span class="_ _6"> </span>and <span class="_ _6"> </span>collectivel<span class="_ _2"></span>y<span class="_ _0"></span> <span class="_ _6"> </span>as <span class="_ _6"> </span>the </span></div><div class="t m0 x3 h4 y19 ff3 fs0 fc0 sc0 ls6 ws0">“Parties”.<span class="ff2 ws3"> </span></div><div class="t m0 x3 h4 y1a ff2 fs0 fc0 sc0 ls6 ws3"> </div><div class="t m0 x3 h3 y1b ff1 fs0 fc0 sc0 ls6 ws3"> </div><div class="t m0 x3 h3 y1c ff1 fs0 fc0 sc0 ls6 ws0">WHEREAS<span class="ff2 ws3">, <span class="ff1">What is the scope of work of<span class="_ _2"></span> the First P<span class="_ _5"></span>arty?<span class="_ _2"></span><span class="ff2"> </span></span></span></div><div class="t m0 x3 h4 y1d ff2 fs0 fc0 sc0 ls6 ws3"> </div><div class="t m0 x3 h3 y1e ff1 fs0 fc0 sc0 ls6 ws0">WHEREAS<span class="ff2 ws3">, <span class="ff1">What is the scope of work of the Second Party?</span> </span></div><div class="t m0 x3 h4 y1f ff2 fs0 fc0 sc0 ls6 ws3"> </div><div class="t m0 x3 h3 y20 ff1 fs0 fc0 sc0 ls6 ws0">Recitals<span class="ff2 ws3"> </span></div><div class="t m0 x3 h3 y21 ff2 fs0 fc0 sc0 ls6 ws0">(A)<span class="ff6 ls4 ws3"> </span><span class="ws3">The <span class="_ _4"></span>Parties <span class="_ _4"></span>wish <span class="_ _3"></span>to <span class="_ _4"></span>set <span class="_ _4"></span>o<span class="_ _2"></span>ut <span class="_ _4"></span>in <span class="_ _3"></span>this <span class="_ _4"></span>MoU <span class="_ _4"></span>certain <span class="_ _4"></span>te<span class="_ _2"></span>rms <span class="_ _4"></span>governing <span class="_ _4"></span>their <span class="_ _3"></span>collaboration <span class="_ _4"></span>in <span class="_ _3"></span><span class="ff1">What <span class="_ _3"></span>is <span class="_ _4"></span>the<span class="_ _2"></span> </span></span></div><div class="t m0 x6 h3 y22 ff1 fs0 fc0 sc0 ls6 ws3">purpose of the MoU?<span class="ff2">  </span></div><div class="t m0 x3 h3 y23 ff2 fs0 fc0 sc0 ls6 ws0">(B)<span class="ff6 ls5 ws3"> </span><span class="ws3">The parties shall form the formation / <span class="ff1">What is the limitation of this MoU?</span> </span></div><div class="t m0 x3 h4 y24 ff2 fs0 fc0 sc0 ls6 ws0">(C)<span class="ff6 ls5 ws3"> </span><span class="ws3">The Parties desire to enter into this MoU to set forth the scope of their planned collabora<span class="_ _0"></span>tion.  <span class="_ _2"></span> </span></div><div class="t m0 x3 h4 y25 ff2 fs0 fc0 sc0 ls6 ws3"> </div><div class="t m0 x3 h4 y26 ff2 fs0 fc0 sc0 ls6 ws3"> </div><div class="t m0 x3 h4 y27 ff2 fs0 fc0 sc0 ls6 ws3"> </div></div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf2" class="pf w0 h0" data-page-no="2"><div class="pc pc2 w0 h0"><img class="bi x0 y0 w1 h1" alt="" src=""/><div class="c x1 y28 w2 h7"><div class="t m0 x4 h3 y29 ff1 fs1 fc0 sc0 ls6 ws1">1.<span class="ff4 ls9 ws3"> </span><span class="fs0 ws3">TERMS OF COLLABORATION<span class="ff2 lsf">: <span class="ls6"> </span></span></span></div><div class="t m0 x7 h3 y2a ff7 fs0 fc0 sc0 lsa">-<span class="ff6 lsb ws3"> <span class="ff1 ls6">What are the terms of collaboration? </span></span></div><div class="t m0 x8 h3 y2b ff7 fs0 fc0 sc0 lsa">-<span class="ff6 lsc ws3"> <span class="ff2 ls6">The purpose of this cooperation is <span class="ff1">What is the purpose of this collaboration?<span class="ff8"> </span></span></span></span></div><div class="t m0 x3 h4 y2c ff2 fs0 fc0 sc0 lsd ws3"> <span class="ff1 fs1 ls6 ws1 v1">2.<span class="ff4 ls9 ws3"> </span><span class="fs0 ws0">STEERING<span class="fs2 lse ws3"> </span>COMMITTEE<span class="ff2 ws3"> </span></span></span></div><div class="t m0 x6 h4 y2d ff2 fs0 fc0 sc0 ls6 ws3">Effectively <span class="_ _7"> </span>immediately <span class="_ _1"> </span>upon <span class="_ _7"> </span>signing <span class="_ _1"> </span>this <span class="_ _7"> </span>MoU, <span class="_ _1"> </span>the <span class="_ _7"> </span>Parties <span class="_ _1"> </span>will <span class="_ _7"> </span>each <span class="_ _1"> </span>assign <span class="_ _7"> </span>representatives <span class="_ _1"> </span>to </div><div class="t m0 x6 h8 y2e ff3 fs0 fc0 sc0 ls6 ws3">formulate <span class="_ _2"></span>a <span class="_ _2"></span>steering <span class="_ _4"></span>committee <span class="_ _2"></span>(hereinafter <span class="_ _2"></span>the <span class="_ _2"></span>“Comm<span class="_ _2"></span>ittee”) who <span class="_ _4"></span>will <span class="_ _2"></span>es<span class="_ _2"></span>tablish <span class="_ _2"></span>a <span class="_ _2"></span>regular <span class="_ _2"></span>schedul<span class="_ _2"></span>e </div><div class="t m0 x6 h4 y2f ff2 fs0 fc0 sc0 ls6 ws3">of <span class="_ _5"></span>meetings <span class="_ _5"></span>and or <span class="_ _5"></span>teleconferences <span class="_ _5"></span>to <span class="_ _0"></span>discuss <span class="_ _5"></span>progress and <span class="_ _5"></span>actions <span class="_ _5"></span>relating <span class="_ _5"></span>t<span class="_ _2"></span>o <span class="_ _5"></span>areas of <span class="_ _5"></span>partnership a<span class="_ _5"></span>nd<span class="_ _2"></span> </div><div class="t m0 x6 h4 y30 ff2 fs0 fc0 sc0 ls6 ws3">cooperation identified in this MoU. </div><div class="t m0 x3 h4 y31 ff2 fs0 fc0 sc0 lsd ws3"> <span class="ff1 fs1 ls6 ws1 v1">3.<span class="ff4 ls9 ws3"> </span><span class="fs0 ws0">EXPENSES<span class="fs2 lse ws3"> </span><span class="lsf">/<span class="fs2 lse ws3"> </span></span>COSTS<span class="ff2 ws3"> </span></span></span></div><div class="t m0 x6 h4 y32 ff2 fs0 fc0 sc0 ls6 ws3">Each <span class="_ _6"></span>Party <span class="_ _6"></span>shall <span class="_ _6"></span>bear <span class="_ _8"></span>its <span class="_ _6"></span>own <span class="_ _6"></span>costs <span class="_ _6"></span>and <span class="_ _8"></span>ex<span class="_ _2"></span>penses <span class="_ _6"></span>incurred <span class="_ _8"></span>thereb<span class="_ _2"></span>y <span class="_ _8"></span>to <span class="_ _6"></span>perform <span class="_ _6"></span>its <span class="_ _6"></span>own <span class="_ _8"></span>obli<span class="_ _2"></span>gation </div><div class="t m0 x6 h4 y33 ff2 fs0 fc0 sc0 ls6 ws3">hereunder and allocate adequate resources.  </div><div class="t m0 x3 h4 y34 ff2 fs0 fc0 sc0 lsd ws3"> <span class="ff1 fs1 ls6 ws1 v1">4.<span class="ff4 ls9 ws3"> </span><span class="fs0 ws0">TERM<span class="fs2 lse ws3"> </span><span class="ls12 ws4">AND<span class="fs2 lse ws3"> </span></span>TERMINATION<span class="ff2 ws3"> </span></span></span></div><div class="t m0 x6 h3 y35 ff2 fs0 fc0 sc0 ls6 ws3">3.1 <span class="_ _2"></span>This <span class="_ _4"></span>MOU <span class="_ _2"></span>is <span class="_ _3"></span>effective <span class="_ _2"></span>from <span class="_ _4"></span>the <span class="_ _2"></span>date<span class="_ _2"></span> <span class="_ _2"></span>first <span class="_ _4"></span>written <span class="_ _4"></span>above <span class="_ _4"></span>and <span class="_ _2"></span>shall <span class="_ _4"></span>continue <span class="_ _4"></span>for <span class="_ _4"></span>a <span class="_ _2"></span>period <span class="_ _4"></span>of <span class="_ _4"></span><span class="ff1">How </span></div><div class="t m0 x6 h3 y36 ff1 fs0 fc0 sc0 ls6 ws3">long shall the MoU be e<span class="_ _2"></span>ffective?<span class="ff2"> unless otherwise terminated pursuant to the terms o<span class="_ _2"></span>f this MOU or<span class="_ _2"></span> </span></div><div class="t m0 x6 h4 y37 ff2 fs0 fc0 sc0 ls6 ws3">superseded by a definitive agreement.  This MOU<span class="_ _5"></span> ma<span class="_ _2"></span>y be extended by<span class="_ _5"></span> the <span class="_ _2"></span>mutual written agreement </div><div class="t m0 x6 h4 y38 ff2 fs0 fc0 sc0 ls6 ws3">of both Parties.<span class="ff8"> </span></div><div class="t m0 x3 h4 y39 ff2 fs0 fc0 sc0 ls10 ws3"> <span class="ls6 v1">3.2 Either Party may opt, at its entire discretion, a<span class="_ _2"></span>nd without cause, not to continue with the outlined </span></div><div class="t m0 x6 h4 y3a ff2 fs0 fc0 sc0 ls6 ws3">action <span class="_ _5"></span>items, <span class="_ _5"></span>without <span class="_ _9"></span>any <span class="_ _5"></span>obligation <span class="_ _9"></span>to <span class="_ _5"></span>provide <span class="_ _5"></span>reasoning <span class="_ _5"></span>or <span class="_ _9"></span>ex<span class="_ _2"></span>planation <span class="_ _9"></span>wha<span class="_ _2"></span>tsoever <span class="_ _9"></span>b<span class="_ _2"></span>y <span class="_ _9"></span>giving <span class="_ _5"></span>written </div><div class="t m0 x6 h4 y3b ff2 fs0 fc0 sc0 ls6 ws3">notice to the other Parties. </div><div class="t m0 x6 h4 y3c ff2 fs0 fc0 sc0 ls6 ws3"> </div><div class="t m0 x6 h3 y3d ff2 fs0 fc0 sc0 ls6 ws3">3.3 I<span class="_ _5"></span>t is understood <span class="_ _5"></span>that neither <span class="_ _5"></span>part<span class="_ _2"></span>y, <span class="ff1">the <span class="_ _5"></span>First Party<span class="ff2"> <span class="_ _5"></span>and <span class="ff1">the <span class="_ _5"></span>S<span class="_ _2"></span>econd Party<span class="ff2"> <span class="_ _5"></span>to this Me<span class="_ _0"></span>morandum <span class="_ _5"></span>o<span class="_ _2"></span>f </span></span></span></span></div><div class="t m0 x6 h4 y3e ff2 fs0 fc0 sc0 ls6 ws3">Understanding is <span class="_ _5"></span>the agent of the other <span class="_ _5"></span>nor neither is liable for <span class="_ _5"></span>th<span class="_ _2"></span>e wrongful <span class="_ _0"></span>acts or <span class="_ _5"></span>n<span class="_ _2"></span>egligence of <span class="_ _5"></span>th<span class="_ _2"></span>e </div><div class="t m0 x6 h4 y3f ff2 fs0 fc0 sc0 ls6 ws3">other.  <span class="_ _3"></span>Each <span class="_ _3"></span>part<span class="_ _2"></span>y <span class="_ _3"></span>shall <span class="_ _3"></span>be <span class="_ _8"></span>responsible <span class="_ _4"></span>for <span class="_ _8"></span>its <span class="_ _3"></span>negligent <span class="_ _3"></span>acts <span class="_ _8"></span>or <span class="_ _3"></span>omissions <span class="_ _3"></span>and <span class="_ _8"></span>those <span class="_ _3"></span>of <span class="_ _3"></span>its <span class="_ _8"></span>officers, </div><div class="t m0 x6 h4 y40 ff2 fs0 fc0 sc0 ls6 ws3">employees or agents, howsoever caused, to the extent allowed by their respec<span class="_ _0"></span>tive state laws. </div><div class="t m0 x3 h4 y41 ff2 fs0 fc0 sc0 lsd ws3"> <span class="ff1 fs1 ls6 ws1 v1">5.<span class="ff4 ls9 ws3"> </span><span class="fs0 ws0">MODIFICATION<span class="ff2 ws3"> </span></span></span></div><div class="t m0 x6 h4 y42 ff2 fs0 fc0 sc0 ls6 ws3">Modifications to this <span class="_ _2"></span>MOU shall <span class="_ _2"></span>be made onl<span class="_ _2"></span>y by mut<span class="_ _2"></span>ual consent of both <span class="_ _2"></span>Parties, b<span class="_ _2"></span>y the issuance of </div><div class="t m0 x6 h4 y43 ff2 fs0 fc0 sc0 ls6 ws3">a written modification, si<span class="_ _2"></span>gned and dat<span class="_ _2"></span>ed b<span class="_ _2"></span>y<span class="_ _0"></span> authorized <span class="_ _2"></span>officials of both P<span class="_ _2"></span>a<span class="_ _2"></span>rties, prior to <span class="_ _2"></span>an<span class="_ _2"></span>y<span class="_ _0"></span> changes </div><div class="t m0 x6 h4 y44 ff2 fs0 fc0 sc0 ls6 ws3">being performed. </div><div class="t m0 x4 h3 y45 ff1 fs1 fc0 sc0 ls6 ws1">6.<span class="ff4 ls9 ws3"> </span><span class="fs0 ws0">CONFIDENTIALITY<span class="fs2 ls11 ws3"> </span><span class="ff2 ws3"> </span></span></div><div class="t m0 x4 h4 y46 ff2 fs0 fc0 sc0 ls6 ws3">The <span class="_ _a"> </span>Parties <span class="_ _a"> </span>agreed <span class="_ _a"> </span>that <span class="_ _a"> </span>neither <span class="_ _a"> </span>they <span class="_ _a"> </span>nor <span class="_ _a"> </span>their <span class="_ _a"> </span>subsidiaries, <span class="_ _a"> </span>affiliates, <span class="_ _a"> </span>agents, <span class="_ _a"> </span>emplo<span class="_ _2"></span>y<span class="_ _0"></span>ees <span class="_ _a"> </span>or </div><div class="t m0 x4 h4 y47 ff2 fs0 fc0 sc0 ls6 ws3">representatives <span class="_ _5"></span>will disclose <span class="_ _5"></span>or allow <span class="_ _5"></span>disclosure of <span class="_ _5"></span>thi<span class="_ _2"></span>s <span class="_ _0"></span>MoU or <span class="_ _5"></span>the information <span class="_ _5"></span>contained <span class="_ _5"></span>her<span class="_ _2"></span>ein <span class="_ _5"></span>to any </div><div class="t m0 x4 h4 y48 ff2 fs0 fc0 sc0 ls6 ws3">party other <span class="_ _2"></span>than <span class="_ _2"></span>its <span class="_ _2"></span>own <span class="_ _2"></span>emplo<span class="_ _2"></span>yees and <span class="_ _2"></span>agents <span class="_ _2"></span>on <span class="_ _2"></span>a <span class="_ _2"></span>need<span class="_ _2"></span>-<span class="lsf ws5">to</span>-know <span class="_ _2"></span>basis <span class="_ _2"></span>(and <span class="_ _2"></span>subject to <span class="_ _4"></span>confidentiality </div><div class="t m0 x4 h4 y49 ff2 fs0 fc0 sc0 ls6 ws3">provisions <span class="_ _4"></span>no <span class="_ _4"></span>less <span class="_ _4"></span>restrictive <span class="_ _4"></span>than <span class="_ _4"></span>the <span class="_ _4"></span>ones <span class="_ _4"></span>contained <span class="_ _4"></span>herein) <span class="_ _4"></span>without <span class="_ _4"></span>the <span class="_ _4"></span>prior <span class="_ _4"></span>written <span class="_ _4"></span>approval <span class="_ _4"></span>of <span class="_ _4"></span>all </div><div class="t m0 x4 h4 y4a ff2 fs0 fc0 sc0 ls6 ws3">Parties.  </div></div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf3" class="pf w0 h0" data-page-no="3"><div class="pc pc3 w0 h0"><img class="bi x0 y0 w1 h1" alt="" src=""/><div class="c x1 y4b w2 h9"><div class="t m0 x4 h3 y4c ff1 fs1 fc0 sc0 ls6 ws1">7.<span class="ff4 ls9 ws3"> </span><span class="fs0 ws0">FURTHER<span class="fs2 lse ws3"> </span>ASSURANCE<span class="ff2 ws3"> </span></span></div><div class="t m0 x4 h4 y4d ff2 fs0 fc0 sc0 ls6 ws3">Each <span class="_ _2"></span>Part<span class="_ _2"></span>y sh<span class="_ _2"></span>all <span class="_ _4"></span>execute <span class="_ _2"></span>any <span class="_ _4"></span>additional <span class="_ _2"></span>documents <span class="_ _4"></span>upon <span class="_ _4"></span>the <span class="_ _2"></span>written <span class="_ _4"></span>request <span class="_ _4"></span>of <span class="_ _2"></span>the <span class="_ _2"></span>other <span class="_ _4"></span>Part<span class="_ _2"></span>y <span class="_ _2"></span>and <span class="_ _2"></span>d<span class="_ _2"></span>o </div><div class="t m0 x4 h4 y4e ff2 fs0 fc0 sc0 ls6 ws3">any other acts or things that may<span class="_ _0"></span> reasonabl<span class="_ _2"></span>y be<span class="_ _5"></span> r<span class="_ _2"></span>equired to effectuate the purposes of this MOU.<span class="_ _2"></span> </div><div class="t m0 x4 h3 y4f ff1 fs1 fc0 sc0 ls6 ws1">8.<span class="ff4 ls9 ws3"> </span><span class="fs0 ws0">ANNOUNCEMENTS<span class="ff2 ws3"> </span></span></div><div class="t m0 x4 h4 y50 ff2 fs0 fc0 sc0 ls6 ws3">Neither <span class="_ _8"></span>Party <span class="_ _8"></span>ma<span class="_ _2"></span>y<span class="_ _0"></span> <span class="_ _8"></span>issue<span class="_ _2"></span> <span class="_ _8"></span>any <span class="_ _8"></span>press <span class="_ _8"></span>r<span class="_ _2"></span>elease <span class="_ _8"></span>or <span class="_ _8"></span>make <span class="_ _6"></span>any <span class="_ _8"></span>public <span class="_ _8"></span>statement <span class="_ _6"></span>related <span class="_ _8"></span>to <span class="_ _8"></span>an<span class="_ _2"></span>y <span class="_ _8"></span>information </div><div class="t m0 x4 h4 y51 ff2 fs0 fc0 sc0 ls6 ws3">related to or arising out of this MOU, without prior, mutual coordination and agreement. </div><div class="t m0 x4 h3 y52 ff1 fs1 fc0 sc0 ls6 ws1">9.<span class="ff4 ls9 ws3"> <span class="ff1 fs2 lse"> </span></span><span class="fs0 ws0">ENTIRE<span class="fs2 lse ws3"> </span>AGREEMENT<span class="ff2 ws3"> </span></span></div><div class="t m0 x4 h4 y53 ff2 fs0 fc0 sc0 ls6 ws3">This MOU contains <span class="_ _2"></span>the e<span class="_ _2"></span>ntire agreement between <span class="_ _2"></span>the Parties with <span class="_ _2"></span>respect <span class="_ _2"></span>to <span class="_ _2"></span>the subject matter h<span class="_ _2"></span>ereof, </div><div class="t m0 x4 h4 y54 ff2 fs0 fc0 sc0 ls6 ws3">and <span class="_ _b"> </span>supersedes <span class="_ _b"> </span>an<span class="_ _2"></span>y <span class="_ _b"> </span>prior <span class="_ _b"> </span>or <span class="_ _b"> </span>contemporaneous <span class="_ _b"> </span>oral <span class="_ _b"> </span>or <span class="_ _c"> </span>written <span class="_ _b"> </span>agreements, <span class="_ _b"> </span>commitments, </div><div class="t m0 x4 h4 y55 ff2 fs0 fc0 sc0 ls6 ws3">understandings, or communications between the Parties regarding the subject matter hereof. </div><div class="t m0 x4 h3 y56 ff1 fs1 fc0 sc0 ls6 ws1">10.<span class="ff4 ls13 ws3"> </span><span class="fs0 ws0">JURISDICTION<span class="fs2 lse ws3"> </span><span class="ff2 ws3"> </span></span></div><div class="t m0 x4 h4 y57 ff2 fs0 fc0 sc0 ls6 ws3">This MOU is governed by<span class="_ _0"></span> the laws of the A<span class="_ _2"></span>rab Republic of Egypt.  </div><div class="t m0 x3 h4 y58 ff2 fs0 fc0 sc0 ls6 ws3"> </div><div class="t m0 x3 h4 y59 ff2 fs0 fc0 sc0 ls6 ws3">IN WITNESS WHEREOF, the undersigned have hereunto se<span class="_ _5"></span>t t<span class="_ _2"></span>heir hands as of the Effective Date: <span class="_ _2"></span> </div><div class="t m0 x3 h4 y5a ff2 fs0 fc0 sc0 ls6 ws3"> </div><div class="t m0 x3 h4 y5b ff2 fs0 fc0 sc0 ls6 ws3">For and behalf of: </div><div class="t m0 x3 h4 y5c ff2 fs0 fc0 sc0 ls6 ws3"> </div><div class="t m0 x3 h4 y5d ff2 fs0 fc0 sc0 ls6 ws3">Signature: </div><div class="t m0 x3 h4 y5e ff2 fs0 fc0 sc0 ls6 ws3">Name:  <span class="_ _d" id=""><input type="text" name="" id="firstName"></span> <span class="_ _e"> </span> <span class="_ _e"> </span> <span class="_ _e"> </span>_    </div><div class="t m0 x3 h4 y5f ff2 fs0 fc0 sc0 ls6 ws3">Title: <span class="_ _b"> </span>   <span class="_ _f"> </span> <span class="_ _e"> </span> <span class="_ _e"> </span> <span class="_ _e"> </span> <span class="_ _e"> </span>_   </div><div class="t m0 x3 h4 y60 ff2 fs0 fc0 sc0 ls6 ws3"> </div><div class="t m0 x3 h4 y61 ff2 fs0 fc0 sc0 ls6 ws3">For and behalf of: </div><div class="t m0 x3 h3 y62 ff1 fs0 fc0 sc0 ls6 ws3"> </div><div class="t m0 x3 h4 y63 ff2 fs0 fc0 sc0 ls6 ws3">Signature: </div><div class="t m0 x3 h4 y64 ff2 fs0 fc0 sc0 ls6 ws3">Name:  <span class="_ _d"></span> <span class="_ _e"> </span> <span class="_ _e"> </span> <span class="_ _e"> </span>_    </div><div class="t m0 x3 h4 y65 ff2 fs0 fc0 sc0 ls6 ws3">Title: <span class="_ _b"> </span>   <span class="_ _f"> </span> <span class="_ _e"> </span> <span class="_ _e"> </span> <span class="_ _e"> </span> <span class="_ _e"> </span>_   </div><div class="t m0 x3 h6 y66 ff2 fs1 fc0 sc0 ls6 ws3"> </div></div><div class="c x0 y67 w3 h0"><div class="t m0 x9 h6 y68 ff2 fs1 fc0 sc0 ls6 ws3"> </div></div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+</div>
+<div class="loading-indicator">
+<img alt="" src=""/>
+</div>
+</body>
+</html>
