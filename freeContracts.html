@@ -327,8 +327,9 @@
                 </div>
             </div>
         </div>
+        <button type="button" id="GetFile">Get File!</button>
         <!-- footer -->
-     <footer class="site-footer">
+       <footer class="site-footer">
         <div class="container">
           <div class="row pt-5 pb-5 justify-content-between">
             <div class="col-sm-6 col-md-6 col-lg-3 col-xl-2">
@@ -501,23 +502,67 @@
         </script>
         <!-- http form data send -->
         <script>
-            const Url = '';
+            const Url = 'https://qbizns.com/legal-clinic/edit-files-php/process.php';
             const name1 = document.getElementById('inlineFormInputGroupUsername').value;
-            $('#btn-generate').click(function(){
+            $(document).on('click','#btn-generate', function(){
+                
                 const userData = {
-                    name: name1
+                    template_name : 'NDA xyz',
+                    date : '10/10/2020',
+                    passport : '124567890'
                 };
                 $.ajax({
-                    url: Url,
+                    url: 'https://qbizns.com/legal-clinic/edit-files-php/process.php',
                     data : userData,
+                    type: 'post',
+                    header: 'Access-Control-Allow-Origin: *',
                     success: function(result){
                         console.log(result);
+                        $("#ajax_result").html(result);
+                        $.ajax({
+                            url: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/172905/test.pdf',
+                            method: 'GET',
+                            xhrFields: {
+                                responseType: 'blob'
+                            },
+                            success: function (data) {
+                                var a = document.createElement('a');
+                                var url = window.URL.createObjectURL(data);
+                                a.href = url;
+                                a.download = 'myfile.pdf';
+                                document.body.append(a);
+                                a.click();
+                                a.remove();
+                                window.URL.revokeObjectURL(url);
+                            }
+                        });
                     },
                     error: function(error){
                         console.log(`error ${error}`);
                     }
                 })
             });
+        </script>
+        <script>
+            $('#GetFile').on('click', function () {
+                $.ajax({
+                    url: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/172905/test.pdf',
+                    method: 'GET',
+                    xhrFields: {
+                        responseType: 'blob'
+                    },
+                    success: function (data) {
+                        var a = document.createElement('a');
+                        var url = window.URL.createObjectURL(data);
+                        a.href = url;
+                        a.download = 'myfile.pdf';
+                        document.body.append(a);
+                        a.click();
+                        a.remove();
+                        window.URL.revokeObjectURL(url);
+                    }
+                });
+});
         </script>
 </body>
 </html>
